@@ -10,7 +10,7 @@ object RandomShellForm: TRandomShellForm
   Constraints.MinWidth = 613
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.0.12.0'
+  LCLVersion = '1.2.2.0'
   object ParamPanel: TPanel
     Left = 0
     Height = 72
@@ -22,25 +22,25 @@ object RandomShellForm: TRandomShellForm
     TabOrder = 7
     object df1Label: TLabel
       Left = 8
-      Height = 17
+      Height = 16
       Top = 40
-      Width = 37
+      Width = 36
       Caption = 'df1 ='
       ParentColor = False
     end
     object df2Label: TLabel
       Left = 134
-      Height = 17
+      Height = 16
       Top = 40
-      Width = 37
+      Width = 36
       Caption = 'df2 ='
       ParentColor = False
     end
     object ncpLabel: TLabel
       Left = 261
-      Height = 17
+      Height = 16
       Top = 40
-      Width = 38
+      Width = 37
       Caption = 'ncp ='
       ParentColor = False
     end
@@ -67,9 +67,9 @@ object RandomShellForm: TRandomShellForm
     end
     object rateLabel: TLabel
       Left = 384
-      Height = 17
+      Height = 16
       Top = 40
-      Width = 40
+      Width = 39
       Caption = 'rate ='
       ParentColor = False
     end
@@ -96,17 +96,17 @@ object RandomShellForm: TRandomShellForm
     end
     object nLabel: TLabel
       Left = 21
-      Height = 17
+      Height = 16
       Top = 12
-      Width = 24
+      Width = 23
       Caption = 'n ='
       ParentColor = False
     end
     object minLabel: TLabel
       Left = 131
-      Height = 17
+      Height = 16
       Top = 13
-      Width = 39
+      Width = 38
       Caption = 'min ='
       ParentColor = False
     end
@@ -119,9 +119,9 @@ object RandomShellForm: TRandomShellForm
     end
     object maxLabel: TLabel
       Left = 256
-      Height = 17
+      Height = 16
       Top = 13
-      Width = 43
+      Width = 42
       Caption = 'max ='
       ParentColor = False
     end
@@ -134,9 +134,9 @@ object RandomShellForm: TRandomShellForm
     end
     object meanLabel: TLabel
       Left = 373
-      Height = 17
+      Height = 16
       Top = 13
-      Width = 50
+      Width = 49
       Caption = 'mean ='
       ParentColor = False
     end
@@ -150,9 +150,9 @@ object RandomShellForm: TRandomShellForm
     end
     object sdLabel: TLabel
       Left = 502
-      Height = 17
+      Height = 16
       Top = 13
-      Width = 32
+      Width = 31
       Caption = 'SD ='
       ParentColor = False
     end
