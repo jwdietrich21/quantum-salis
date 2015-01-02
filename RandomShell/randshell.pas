@@ -37,11 +37,10 @@ type
   { TRandomShellForm }
 
   TRandomShellForm = class(TForm)
+    bSpin: TFloatSpinEdit;
+    cSpin: TFloatSpinEdit;
     bLabel: TLabel;
     cLabel: TLabel;
-    aSpin: TSpinEdit;
-    bSpin: TSpinEdit;
-    cSpin: TSpinEdit;
     GammaButton: TButton;
     ChisqButton: TButton;
     CountSpin: TSpinEdit;
@@ -59,6 +58,7 @@ type
     FileMenu: TMenuItem;
     EditMenu: TMenuItem;
     aLabel: TLabel;
+    aSpin: TFloatSpinEdit;
     UndoItem: TMenuItem;
     Divider_2_1: TMenuItem;
     CutItem: TMenuItem;
@@ -180,9 +180,10 @@ procedure TRandomShellForm.expButtonClick(Sender: TObject);
 var
   i, num: integer;
   min, max: integer;
-  rate: real;
+  a, rate: real;
 begin
   num := CountSpin.Value;
+  a := aSpin.Value;
   rate := rateSpin.Value;
   ValuesGrid.Clear;
   ValuesGrid.RowCount := num + 2;
@@ -194,7 +195,7 @@ begin
     for i := 1 to num do
     begin
       ValuesGrid.Cells[0, i] := IntToStr(i);
-      ValuesGrid.Cells[1, i] := FloatToStr(randomExp(rate));
+      ValuesGrid.Cells[1, i] := FloatToStr(randomExp(a, rate));
     end;
 end;
 
@@ -218,8 +219,30 @@ end;
 
 procedure TRandomShellForm.GammaButtonClick(Sender: TObject);
 { Creates a Gamma distribution }
+var
+  i, num: integer;
+  a, b, c: real;
 begin
-
+  num := CountSpin.Value;
+  a := aSpin.Value;
+  b := bSpin.Value;
+  c := cSpin.Value;
+  ValuesGrid.Clear;
+  ValuesGrid.RowCount := num + 2;
+  DrawGridCaptions(ValuesGrid);
+  if b <= 0 then
+    MessageDlg('b <= 0', mtWarning, [mbOK], 0)
+  else
+  if c <= 0 then
+    MessageDlg('c <= 0', mtWarning, [mbOK], 0)
+  else
+  begin
+    for i := 1 to num do
+    begin
+      ValuesGrid.Cells[0, i] := IntToStr(i);
+      ValuesGrid.Cells[1, i] := FloatToStr(randomGamma(a, b, c));
+    end;
+  end;
 end;
 
 procedure TRandomShellForm.meanSpinChange(Sender: TObject);
