@@ -1,16 +1,17 @@
 object RandomShellForm: TRandomShellForm
-  Left = 300
+  Left = 284
   Height = 364
-  Top = 176
+  Top = 151
   Width = 652
   Caption = 'Random Number Generator'
   ClientHeight = 364
   ClientWidth = 652
   Constraints.MinHeight = 313
   Constraints.MinWidth = 613
+  Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.2.2.0'
+  LCLVersion = '1.2.6.0'
   object ParamPanel: TPanel
     Left = 0
     Height = 72
@@ -272,5 +273,56 @@ object RandomShellForm: TRandomShellForm
     Caption = 'Exp'
     OnClick = expButtonClick
     TabOrder = 11
+  end
+  object MainMenu1: TMainMenu
+    left = 208
+    top = 296
+    object FileMenu: TMenuItem
+      Caption = 'File'
+      object NewItem: TMenuItem
+        Caption = 'New'
+      end
+      object OpenItem: TMenuItem
+        Caption = 'Open'
+      end
+      object Divider_1_1: TMenuItem
+        Caption = '-'
+      end
+      object CloseItem: TMenuItem
+        Caption = 'Close'
+      end
+      object SaveItem: TMenuItem
+        Caption = 'Save'
+      end
+      object Divider_1_2: TMenuItem
+        Caption = '-'
+      end
+      object QuitItem: TMenuItem
+        Caption = 'Quit'
+        OnClick = QuitItemClick
+      end
+    end
+    object EditMenu: TMenuItem
+      Caption = 'Edit'
+      Checked = True
+      object UndoItem: TMenuItem
+        Caption = 'Undo'
+      end
+      object Divider_2_1: TMenuItem
+        Caption = '-'
+      end
+      object CutItem: TMenuItem
+        Caption = 'Cut'
+      end
+      object CopyItem: TMenuItem
+        Caption = 'Copy'
+      end
+      object PasteItem: TMenuItem
+        Caption = 'Paste'
+      end
+      object DeleteItem: TMenuItem
+        Caption = 'Delete'
+      end
+    end
   end
 end

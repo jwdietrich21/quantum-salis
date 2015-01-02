@@ -8,17 +8,17 @@ unit randshell;
 
 { Version 1.0.0 }
 
-{ (c) J. W. Dietrich, 1994 - 2014 }
+{ (c) J. W. Dietrich, 1994 - 2015 }
 { (c) Ludwig Maximilian University of Munich 1995 - 2002 }
 { (c) University of Ulm Hospitals 2002-2004 }
-{ (c) Ruhr University of Bochum 2005 - 2014 }
+{ (c) Ruhr University of Bochum 2005 - 2015 }
 
 { Source code released under the BSD License }
 
 { See the file "license.txt", included in this distribution, }
 { for details about the copyright. }
 { Current versions and additional information are available from }
-{ http://puma-repository.sf.net }
+{ http://quantum-salis.sf.net }
 
 { This program is distributed in the hope that it will be useful, }
 { but WITHOUT ANY WARRANTY; without even the implied warranty of }
@@ -30,7 +30,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Grids, ComCtrls, Spin, ExtCtrls, Math, rDist;
+  Grids, ComCtrls, Spin, ExtCtrls, Menus, Math, rDist;
 
 type
 
@@ -45,10 +45,26 @@ type
     df2Spin: TSpinEdit;
     expButton: TButton;
     fButton: TButton;
+    MainMenu1: TMainMenu;
     maxLabel: TLabel;
     maxSpin: TSpinEdit;
     meanLabel: TLabel;
     meanSpin: TSpinEdit;
+    FileMenu: TMenuItem;
+    EditMenu: TMenuItem;
+    UndoItem: TMenuItem;
+    Divider_2_1: TMenuItem;
+    CutItem: TMenuItem;
+    CopyItem: TMenuItem;
+    DeleteItem: TMenuItem;
+    PasteItem: TMenuItem;
+    NewItem: TMenuItem;
+    OpenItem: TMenuItem;
+    Divider_1_1: TMenuItem;
+    CloseItem: TMenuItem;
+    SaveItem: TMenuItem;
+    QuitItem: TMenuItem;
+    Divider_1_2: TMenuItem;
     minLabel: TLabel;
     minSpin: TSpinEdit;
     ncpLabel: TLabel;
@@ -70,6 +86,7 @@ type
     procedure expButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure meanSpinChange(Sender: TObject);
+    procedure QuitItemClick(Sender: TObject);
     procedure rateSpinChange(Sender: TObject);
     procedure RNormButtonClick(Sender: TObject);
     procedure RUnifButtonClick(Sender: TObject);
@@ -176,6 +193,11 @@ end;
 procedure TRandomShellForm.meanSpinChange(Sender: TObject);
 begin
   if meanSpin.Value <> 0 then rateSpin.Value := 1 / meanSpin.Value;
+end;
+
+procedure TRandomShellForm.QuitItemClick(Sender: TObject);
+begin
+  application.terminate;
 end;
 
 procedure TRandomShellForm.rateSpinChange(Sender: TObject);
