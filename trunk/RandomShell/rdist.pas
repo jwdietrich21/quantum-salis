@@ -122,5 +122,11 @@ begin
   end;
 end;
 
+{ Reference:
+Richard Saucier, Computer Generation of Statistical Distributions,
+ARL-TR-2168, US Army Research Laboratory, Aberdeen Proving Ground, MD,
+21005-5068, March 2000.
+}
+
 end.
 
