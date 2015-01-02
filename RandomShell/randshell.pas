@@ -41,6 +41,9 @@ type
     cSpin: TFloatSpinEdit;
     bLabel: TLabel;
     cLabel: TLabel;
+    kLabel: TLabel;
+    kSpin: TSpinEdit;
+    ErlangButton: TButton;
     GammaButton: TButton;
     ChisqButton: TButton;
     CountSpin: TSpinEdit;
@@ -91,6 +94,7 @@ type
     tDistButton: TButton;
     ValuesGrid: TStringGrid;
     procedure ChisqButtonClick(Sender: TObject);
+    procedure ErlangButtonClick(Sender: TObject);
     procedure expButtonClick(Sender: TObject);
     procedure fButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -203,6 +207,31 @@ procedure TRandomShellForm.ChisqButtonClick(Sender: TObject);
 { Creates a chi square distribution }
 begin
 
+end;
+
+procedure TRandomShellForm.ErlangButtonClick(Sender: TObject);
+var
+  i, num: integer;
+  k: integer;
+  mean: real;
+begin
+  num := CountSpin.Value;
+  k := kSpin.Value;
+  mean := meanSpin.Value;
+  ValuesGrid.Clear;
+  ValuesGrid.RowCount := num + 2;
+  DrawGridCaptions(ValuesGrid);
+  if k < 1 then
+    MessageDlg('k < 1', mtWarning, [mbOK], 0)
+  else if mean <= 0 then
+    MessageDlg('mean <= 0', mtWarning, [mbOK], 0)
+  else
+  if num > 0 then
+    for i := 1 to num do
+    begin
+      ValuesGrid.Cells[0, i] := IntToStr(i);
+      ValuesGrid.Cells[1, i] := FloatToStr(randomErlang(mean, k));
+    end;
 end;
 
 procedure TRandomShellForm.fButtonClick(Sender: TObject);

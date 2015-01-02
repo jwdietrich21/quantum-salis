@@ -33,6 +33,7 @@ uses
 
 function randomExp(a, rate: real): real;
 function randomGamma(a, b, c: real): real;
+function randomErlang(mean: real; k: integer): real;
 
 implementation
 
@@ -68,7 +69,7 @@ begin
   B2 := c - ln(4);
   Q := c + 1 / A2;
   C2 := 1 + c / exp(1);
-  found := false;
+  found := False;
   if c < 1 then
   begin
     repeat
@@ -82,23 +83,24 @@ begin
         if unif <= power(y, c - 1) then
         begin
           randomGamma := a + b * y;
-          found := true;
+          found := True;
         end;
       end
       else
       begin
         y := power(p, 1 / c);
-        if unif <= exp(-y) then begin
+        if unif <= exp(-y) then
+        begin
           randomGamma := a + b * y;
-          found := true;
+          found := True;
         end;
       end;
     until found;
   end
   else if c = 1 then
-  { Gamma distribution becomes exponential distribution, if c = 1 }
+    { Gamma distribution becomes exponential distribution, if c = 1 }
   begin
-    randomGamma := randomExp(a, 1/b);
+    randomGamma := randomExp(a, 1 / b);
   end
   else
   begin
@@ -116,9 +118,32 @@ begin
       if (w + D - T * z >= 0) or (w >= ln(z)) then
       begin
         randomGamma := a + b * y;
-        found := true;
+        found := True;
       end;
     until found;
+  end;
+end;
+
+function randomErlang(mean: real; k: integer): real;
+const
+  RESOLUTION = 1000;
+var
+  i: integer;
+  unif, prod: real;
+begin
+  if (mean <= 0) or (k < 1) then
+    randomErlang := NaN
+  else
+  begin
+    prod := 1;
+    for i := 1 to k do
+    begin
+      repeat
+        unif := random(RESOLUTION) / RESOLUTION;
+      until unif <> 0;
+      prod := prod * unif;
+    end;
+    randomErlang := -mean * ln(prod);
   end;
 end;
 
@@ -129,4 +154,3 @@ ARL-TR-2168, US Army Research Laboratory, Aberdeen Proving Ground, MD,
 }
 
 end.
-

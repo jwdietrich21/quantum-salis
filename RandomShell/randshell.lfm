@@ -1,13 +1,13 @@
 object RandomShellForm: TRandomShellForm
   Left = 274
-  Height = 397
+  Height = 386
   Top = 132
-  Width = 662
+  Width = 671
   Caption = 'Random Number Generator'
-  ClientHeight = 397
-  ClientWidth = 662
+  ClientHeight = 386
+  ClientWidth = 671
   Constraints.MinHeight = 313
-  Constraints.MinWidth = 613
+  Constraints.MinWidth = 670
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
@@ -16,10 +16,10 @@ object RandomShellForm: TRandomShellForm
     Left = 0
     Height = 96
     Top = 8
-    Width = 662
+    Width = 671
     Anchors = [akTop, akLeft, akRight]
     ClientHeight = 96
-    ClientWidth = 662
+    ClientWidth = 671
     TabOrder = 7
     object df1Label: TLabel
       Left = 8
@@ -189,7 +189,7 @@ object RandomShellForm: TRandomShellForm
       TabOrder = 4
     end
     object bLabel: TLabel
-      Left = 134
+      Left = 146
       Height = 16
       Top = 68
       Width = 23
@@ -227,7 +227,7 @@ object RandomShellForm: TRandomShellForm
       Value = 1
     end
     object aLabel: TLabel
-      Left = 21
+      Left = 22
       Height = 16
       Top = 68
       Width = 22
@@ -243,11 +243,11 @@ object RandomShellForm: TRandomShellForm
       ParentColor = False
     end
     object cSpin: TFloatSpinEdit
-      Left = 304
+      Left = 305
       Height = 16
       Hint = 'c (Gamma)'
       Top = 68
-      Width = 64
+      Width = 56
       Increment = 0.01
       MaxValue = 100
       MinValue = 0
@@ -255,6 +255,24 @@ object RandomShellForm: TRandomShellForm
       ParentShowHint = False
       TabOrder = 11
       Value = 0
+    end
+    object kSpin: TSpinEdit
+      Left = 543
+      Height = 16
+      Hint = 'k (for Erlang distribution)'
+      Top = 40
+      Width = 60
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 12
+    end
+    object kLabel: TLabel
+      Left = 511
+      Height = 16
+      Top = 40
+      Width = 22
+      Caption = 'k ='
+      ParentColor = False
     end
   end
   object RUnifButton: TButton
@@ -265,6 +283,8 @@ object RandomShellForm: TRandomShellForm
     Width = 75
     Caption = 'Uniform'
     OnClick = RUnifButtonClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 0
   end
   object RNormButton: TButton
@@ -275,11 +295,13 @@ object RandomShellForm: TRandomShellForm
     Width = 75
     Caption = 'Gaussian'
     OnClick = RNormButtonClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 1
   end
   object ValuesGrid: TStringGrid
     Left = 16
-    Height = 204
+    Height = 193
     Top = 160
     Width = 163
     Anchors = [akTop, akLeft, akBottom]
@@ -296,8 +318,8 @@ object RandomShellForm: TRandomShellForm
   object StatusBar: TStatusBar
     Left = 0
     Height = 15
-    Top = 382
-    Width = 662
+    Top = 371
+    Width = 671
     Panels = <>
   end
   object SVectorButton: TButton
@@ -316,9 +338,9 @@ object RandomShellForm: TRandomShellForm
   end
   object OutputMemo: TMemo
     Left = 432
-    Height = 206
+    Height = 195
     Top = 160
-    Width = 213
+    Width = 222
     Anchors = [akTop, akLeft, akRight, akBottom]
     ScrollBars = ssAutoBoth
     TabOrder = 4
@@ -341,6 +363,8 @@ object RandomShellForm: TRandomShellForm
     Caption = 'Chi square'
     Enabled = False
     OnClick = ChisqButtonClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 8
   end
   object fButton: TButton
@@ -352,6 +376,8 @@ object RandomShellForm: TRandomShellForm
     Caption = 'f'
     Enabled = False
     OnClick = fButtonClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 9
   end
   object tDistButton: TButton
@@ -363,6 +389,8 @@ object RandomShellForm: TRandomShellForm
     Caption = 't'
     Enabled = False
     OnClick = tDistButtonClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 10
   end
   object expButton: TButton
@@ -370,20 +398,36 @@ object RandomShellForm: TRandomShellForm
     Height = 24
     Hint = 'Creates an exponential distribution'
     Top = 120
-    Width = 75
+    Width = 62
     Caption = 'Exp'
     OnClick = expButtonClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 11
   end
   object GammaButton: TButton
-    Left = 520
+    Left = 505
     Height = 25
     Hint = 'Creates a Gamma distrituion'
     Top = 120
     Width = 75
     Caption = 'Gamma'
     OnClick = GammaButtonClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 12
+  end
+  object ErlangButton: TButton
+    Left = 592
+    Height = 24
+    Hint = 'Creates a series of numbers from an Erlang distribution'
+    Top = 120
+    Width = 62
+    Caption = 'Erlang'
+    OnClick = ErlangButtonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 13
   end
   object MainMenu1: TMainMenu
     left = 208
