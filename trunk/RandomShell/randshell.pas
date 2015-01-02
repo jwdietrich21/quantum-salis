@@ -37,6 +37,12 @@ type
   { TRandomShellForm }
 
   TRandomShellForm = class(TForm)
+    bLabel: TLabel;
+    cLabel: TLabel;
+    aSpin: TSpinEdit;
+    bSpin: TSpinEdit;
+    cSpin: TSpinEdit;
+    GammaButton: TButton;
     ChisqButton: TButton;
     CountSpin: TSpinEdit;
     df1Label: TLabel;
@@ -52,6 +58,7 @@ type
     meanSpin: TSpinEdit;
     FileMenu: TMenuItem;
     EditMenu: TMenuItem;
+    aLabel: TLabel;
     UndoItem: TMenuItem;
     Divider_2_1: TMenuItem;
     CutItem: TMenuItem;
@@ -83,8 +90,11 @@ type
     SVectorButton: TButton;
     tDistButton: TButton;
     ValuesGrid: TStringGrid;
+    procedure ChisqButtonClick(Sender: TObject);
     procedure expButtonClick(Sender: TObject);
+    procedure fButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure GammaButtonClick(Sender: TObject);
     procedure meanSpinChange(Sender: TObject);
     procedure QuitItemClick(Sender: TObject);
     procedure rateSpinChange(Sender: TObject);
@@ -92,6 +102,7 @@ type
     procedure RUnifButtonClick(Sender: TObject);
     procedure StatPascalVectorButtonClick(Sender: TObject);
     procedure SVectorButtonClick(Sender: TObject);
+    procedure tDistButtonClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -114,6 +125,7 @@ begin
 end;
 
 procedure TRandomShellForm.RUnifButtonClick(Sender: TObject);
+{ Creates a uniform random number distribution }
 var
   i, num: integer;
   min, max: integer;
@@ -138,6 +150,7 @@ begin
 end;
 
 procedure TRandomShellForm.RNormButtonClick(Sender: TObject);
+{ Creates a normal (Gaussian) random number distribution }
 var
   i, num: integer;
   mean, sd: real;
@@ -163,6 +176,7 @@ end;
 
 
 procedure TRandomShellForm.expButtonClick(Sender: TObject);
+{ Creates an exponential random number distribution }
 var
   i, num: integer;
   min, max: integer;
@@ -184,10 +198,28 @@ begin
     end;
 end;
 
+procedure TRandomShellForm.ChisqButtonClick(Sender: TObject);
+{ Creates a chi square distribution }
+begin
+
+end;
+
+procedure TRandomShellForm.fButtonClick(Sender: TObject);
+{ Creates an F distribution }
+begin
+
+end;
+
 procedure TRandomShellForm.FormCreate(Sender: TObject);
 begin
   ValuesGrid.RowCount := 2;
   DrawGridCaptions(ValuesGrid);
+end;
+
+procedure TRandomShellForm.GammaButtonClick(Sender: TObject);
+{ Creates a Gamma distribution }
+begin
+
 end;
 
 procedure TRandomShellForm.meanSpinChange(Sender: TObject);
@@ -243,6 +275,12 @@ begin
   end;
   resultString := resultString + ')';
   OutputMemo.Lines.Add(resultString);
+end;
+
+procedure TRandomShellForm.tDistButtonClick(Sender: TObject);
+{ Creates a t distribution }
+begin
+
 end;
 
 end.
