@@ -1,11 +1,11 @@
 object RandomShellForm: TRandomShellForm
   Left = 284
-  Height = 364
+  Height = 397
   Top = 151
-  Width = 652
+  Width = 662
   Caption = 'Random Number Generator'
-  ClientHeight = 364
-  ClientWidth = 652
+  ClientHeight = 397
+  ClientWidth = 662
   Constraints.MinHeight = 313
   Constraints.MinWidth = 613
   Menu = MainMenu1
@@ -14,12 +14,12 @@ object RandomShellForm: TRandomShellForm
   LCLVersion = '1.2.6.0'
   object ParamPanel: TPanel
     Left = 0
-    Height = 72
+    Height = 96
     Top = 8
-    Width = 652
+    Width = 662
     Anchors = [akTop, akLeft, akRight]
-    ClientHeight = 72
-    ClientWidth = 652
+    ClientHeight = 96
+    ClientWidth = 662
     TabOrder = 7
     object df1Label: TLabel
       Left = 8
@@ -48,15 +48,21 @@ object RandomShellForm: TRandomShellForm
     object df1Spin: TSpinEdit
       Left = 55
       Height = 16
+      Hint = 'Degrees of freedom 1'
       Top = 40
       Width = 64
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
     end
     object df2Spin: TSpinEdit
       Left = 180
       Height = 16
+      Hint = 'Degrees of freedom 2'
       Top = 40
       Width = 64
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
     end
     object ncpSpin: TSpinEdit
@@ -77,21 +83,27 @@ object RandomShellForm: TRandomShellForm
     object rateSpin: TFloatSpinEdit
       Left = 430
       Height = 16
+      Hint = 'Rate (Exponential distribution)'
       Top = 40
       Width = 56
       Increment = 0.01
       MaxValue = 100
       MinValue = 0
       OnChange = rateSpinChange
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 3
       Value = 0
     end
     object CountSpin: TSpinEdit
       Left = 55
       Height = 16
+      Hint = 'Count of random numbers to be generated'
       Top = 12
       Width = 64
       MaxValue = 1000
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 4
       Value = 10
     end
@@ -114,8 +126,11 @@ object RandomShellForm: TRandomShellForm
     object minSpin: TSpinEdit
       Left = 180
       Height = 16
+      Hint = 'lower bound of random numbers (uniform)'
       Top = 12
       Width = 64
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 5
     end
     object maxLabel: TLabel
@@ -129,8 +144,11 @@ object RandomShellForm: TRandomShellForm
     object maxSpin: TSpinEdit
       Left = 305
       Height = 16
+      Hint = 'Upper bound of random numbers (uniform)'
       Top = 12
       Width = 56
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 6
     end
     object meanLabel: TLabel
@@ -144,9 +162,12 @@ object RandomShellForm: TRandomShellForm
     object meanSpin: TSpinEdit
       Left = 430
       Height = 16
+      Hint = 'Mean value (Gaussian)'
       Top = 12
       Width = 56
       OnChange = meanSpinChange
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 7
     end
     object sdLabel: TLabel
@@ -160,15 +181,57 @@ object RandomShellForm: TRandomShellForm
     object SDSpin: TSpinEdit
       Left = 543
       Height = 16
+      Hint = 'Standard deviation (Gaussian)'
       Top = 13
       Width = 60
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 8
+    end
+    object aSpin: TSpinEdit
+      Left = 55
+      Height = 16
+      Hint = 'a (Gamma distribution)'
+      Top = 68
+      Width = 64
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 9
+    end
+    object bSpin: TSpinEdit
+      Left = 180
+      Height = 16
+      Hint = 'b (Gamma distribution)'
+      Top = 68
+      Width = 64
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 10
+    end
+    object cSpin: TSpinEdit
+      Left = 305
+      Height = 16
+      Hint = 'c (Gamma distribution)'
+      Top = 68
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 11
+    end
+    object bLabel: TLabel
+      Left = 134
+      Height = 16
+      Top = 68
+      Width = 23
+      Caption = 'b ='
+      ParentColor = False
     end
   end
   object RUnifButton: TButton
     Left = 16
     Height = 24
-    Top = 88
+    Hint = 'Creates a uniform random number distribution'
+    Top = 120
     Width = 75
     Caption = 'Uniform'
     OnClick = RUnifButtonClick
@@ -177,7 +240,8 @@ object RandomShellForm: TRandomShellForm
   object RNormButton: TButton
     Left = 104
     Height = 24
-    Top = 88
+    Hint = 'Creates a normal (Gaussian) distribution'
+    Top = 120
     Width = 75
     Caption = 'Gaussian'
     OnClick = RNormButtonClick
@@ -185,8 +249,8 @@ object RandomShellForm: TRandomShellForm
   end
   object ValuesGrid: TStringGrid
     Left = 16
-    Height = 208
-    Top = 123
+    Height = 204
+    Top = 160
     Width = 163
     Anchors = [akTop, akLeft, akBottom]
     AutoFillColumns = True
@@ -202,8 +266,8 @@ object RandomShellForm: TRandomShellForm
   object StatusBar: TStatusBar
     Left = 0
     Height = 15
-    Top = 349
-    Width = 652
+    Top = 382
+    Width = 662
     Panels = <>
   end
   object SVectorButton: TButton
@@ -211,8 +275,8 @@ object RandomShellForm: TRandomShellForm
     AnchorSideLeft.Side = asrBottom
     AnchorSideRight.Control = OutputMemo
     Left = 192
-    Height = 24
-    Top = 123
+    Height = 23
+    Top = 160
     Width = 225
     BorderSpacing.Left = 13
     BorderSpacing.Right = 13
@@ -222,17 +286,17 @@ object RandomShellForm: TRandomShellForm
   end
   object OutputMemo: TMemo
     Left = 432
-    Height = 210
-    Top = 123
-    Width = 203
+    Height = 206
+    Top = 160
+    Width = 213
     Anchors = [akTop, akLeft, akRight, akBottom]
     ScrollBars = ssAutoBoth
     TabOrder = 4
   end
   object StatPascalVectorButton: TButton
     Left = 192
-    Height = 24
-    Top = 158
+    Height = 23
+    Top = 192
     Width = 225
     Caption = '-> StatPascal vector'
     OnClick = StatPascalVectorButtonClick
@@ -241,38 +305,72 @@ object RandomShellForm: TRandomShellForm
   object ChisqButton: TButton
     Left = 267
     Height = 24
-    Top = 88
+    Hint = 'Creates a chi square distribution'
+    Top = 120
     Width = 75
     Caption = 'Chi square'
     Enabled = False
+    OnClick = ChisqButtonClick
     TabOrder = 8
   end
   object fButton: TButton
     Left = 355
     Height = 24
-    Top = 88
+    Hint = 'Creates an F distribution'
+    Top = 120
     Width = 62
     Caption = 'f'
     Enabled = False
+    OnClick = fButtonClick
     TabOrder = 9
   end
   object tDistButton: TButton
     Left = 192
     Height = 24
-    Top = 88
+    Hint = 'Creates a t distribution'
+    Top = 120
     Width = 62
     Caption = 't'
     Enabled = False
+    OnClick = tDistButtonClick
     TabOrder = 10
   end
   object expButton: TButton
     Left = 432
     Height = 24
-    Top = 88
+    Hint = 'Creates an exponential distribution'
+    Top = 120
     Width = 75
     Caption = 'Exp'
     OnClick = expButtonClick
     TabOrder = 11
+  end
+  object GammaButton: TButton
+    Left = 520
+    Height = 25
+    Hint = 'Creates a Gamma distrituion'
+    Top = 120
+    Width = 75
+    Caption = 'Gamma'
+    Enabled = False
+    OnClick = GammaButtonClick
+    TabOrder = 12
+  end
+  object aLabel: TLabel
+    Left = 21
+    Height = 16
+    Top = 76
+    Width = 22
+    Caption = 'a ='
+    ParentColor = False
+  end
+  object cLabel: TLabel
+    Left = 277
+    Height = 16
+    Top = 76
+    Width = 21
+    Caption = 'c ='
+    ParentColor = False
   end
   object MainMenu1: TMainMenu
     left = 208
