@@ -56,17 +56,17 @@ end;
 function randomGamma(a, b, c: real): real;
 const
   RESOLUTION = 1000;
+  T = 4.5;
+  D = 1 + ln(T);
 var
   unif: real;
-  A2, B2, C2, Q, T, D, p, y: real;
+  A2, B2, C2, Q, p, y: real;
   p1, p2, v, w, z: real;
   found: boolean;
 begin
   A2 := 1 / sqrt(2 * c - 1);
   B2 := c - ln(4);
   Q := c + 1 / A2;
-  T := 4.5;
-  D := 1 + ln(T);
   C2 := 1 + c / exp(1);
   found := false;
   if c < 1 then
