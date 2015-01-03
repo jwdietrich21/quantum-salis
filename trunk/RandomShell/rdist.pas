@@ -80,6 +80,9 @@ begin
       p := C2 * unif;
       if p > 1 then
       begin
+        repeat
+          unif := random(RESOLUTION) / RESOLUTION;
+        until unif > 0;
         y := -ln((C2 - p) / c);
         if unif <= power(y, c - 1) then
         begin
@@ -101,7 +104,7 @@ begin
   else if c = 1 then
     { Gamma distribution becomes exponential distribution, if c = 1 }
   begin
-    randomGamma := randomExp(a, 1 / b);
+    randomGamma := randomExp(a, b);
   end
   else
   begin
