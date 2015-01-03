@@ -361,7 +361,6 @@ object RandomShellForm: TRandomShellForm
     Top = 120
     Width = 75
     Caption = 'Chi square'
-    Enabled = False
     OnClick = ChisqButtonClick
     ParentShowHint = False
     ShowHint = True

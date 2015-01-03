@@ -33,6 +33,7 @@ uses
 
 function randomExp(a, rate: real): real;
 function randomGamma(a, b, c: real): real;
+function randomChisq(df: integer): real;
 function randomErlang(mean: real; k: integer): real;
 
 implementation
@@ -50,7 +51,7 @@ begin
     repeat
       unif := random(RESOLUTION) / RESOLUTION;
     until unif <> 0;
-    randomExp := a - ln(unif / rate) / rate;
+    randomExp := a - rate * ln(unif);
   end;
 end;
 
@@ -122,6 +123,13 @@ begin
       end;
     until found;
   end;
+end;
+
+function randomChisq(df: integer): real;
+begin
+  if df < 1 then randomChisq := NaN
+  else
+  randomChisq := randomGamma(0, 2, 0.5 * df);
 end;
 
 function randomErlang(mean: real; k: integer): real;
