@@ -34,6 +34,7 @@ uses
 function randomExp(a, rate: real): real;
 function randomGamma(a, b, c: real): real;
 function randomChisq(df: integer): real;
+function randomF(v, w: integer): real;
 function randomErlang(mean: real; k: integer): real;
 
 implementation
@@ -133,6 +134,14 @@ begin
   if df < 1 then randomChisq := NaN
   else
   randomChisq := randomGamma(0, 2, 0.5 * df);
+end;
+
+function randomF(v, w: integer): real;
+begin
+  if (v < 1) or (w < 1) then
+    randomF := NaN
+  else
+  randomF := randomChisq(v) / v / (randomChisq(w) / w);
 end;
 
 function randomErlang(mean: real; k: integer): real;
