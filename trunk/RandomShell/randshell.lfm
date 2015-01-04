@@ -274,6 +274,42 @@ object RandomShellForm: TRandomShellForm
       Caption = 'k ='
       ParentColor = False
     end
+    object vSpin: TSpinEdit
+      Left = 430
+      Height = 16
+      Hint = 'v (for F distribution)'
+      Top = 68
+      Width = 56
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 13
+    end
+    object vLabel: TLabel
+      Left = 401
+      Height = 16
+      Top = 68
+      Width = 21
+      Caption = 'v ='
+      ParentColor = False
+    end
+    object wSpin: TSpinEdit
+      Left = 543
+      Height = 16
+      Hint = 'w (for F distribution)'
+      Top = 68
+      Width = 60
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 14
+    end
+    object wLabel: TLabel
+      Left = 509
+      Height = 16
+      Top = 68
+      Width = 24
+      Caption = 'w ='
+      ParentColor = False
+    end
   end
   object RUnifButton: TButton
     Left = 16
@@ -372,8 +408,7 @@ object RandomShellForm: TRandomShellForm
     Hint = 'Creates an F distribution'
     Top = 120
     Width = 62
-    Caption = 'f'
-    Enabled = False
+    Caption = 'F'
     OnClick = fButtonClick
     ParentShowHint = False
     ShowHint = True

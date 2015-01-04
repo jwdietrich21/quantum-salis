@@ -42,6 +42,8 @@ type
     bLabel: TLabel;
     cLabel: TLabel;
     kLabel: TLabel;
+    vLabel: TLabel;
+    wLabel: TLabel;
     kSpin: TSpinEdit;
     ErlangButton: TButton;
     GammaButton: TButton;
@@ -53,6 +55,7 @@ type
     df2Spin: TSpinEdit;
     expButton: TButton;
     fButton: TButton;
+    vSpin: TSpinEdit;
     MainMenu1: TMainMenu;
     maxLabel: TLabel;
     maxSpin: TSpinEdit;
@@ -93,6 +96,7 @@ type
     SVectorButton: TButton;
     tDistButton: TButton;
     ValuesGrid: TStringGrid;
+    wSpin: TSpinEdit;
     procedure ChisqButtonClick(Sender: TObject);
     procedure ErlangButtonClick(Sender: TObject);
     procedure expButtonClick(Sender: TObject);
@@ -252,8 +256,27 @@ end;
 
 procedure TRandomShellForm.fButtonClick(Sender: TObject);
 { Creates an F distribution }
+var
+  i, num: integer;
+  v, w: integer;
 begin
-
+  num := CountSpin.Value;
+  v := vSpin.Value;
+  w := wSpin.Value;
+  ValuesGrid.Clear;
+  ValuesGrid.RowCount := num + 2;
+  DrawGridCaptions(ValuesGrid);
+  if v < 1 then
+    MessageDlg('v < 1', mtWarning, [mbOK], 0)
+  else if w < 1 then
+    MessageDlg('w < 1', mtWarning, [mbOK], 0)
+  else
+  if num > 0 then
+    for i := 1 to num do
+    begin
+      ValuesGrid.Cells[0, i] := IntToStr(i);
+      ValuesGrid.Cells[1, i] := FloatToStr(randomF(v, w));
+    end;
 end;
 
 procedure TRandomShellForm.FormCreate(Sender: TObject);
