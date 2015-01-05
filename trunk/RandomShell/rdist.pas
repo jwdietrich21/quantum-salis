@@ -142,8 +142,6 @@ end;
 
 function randomT(df: integer): real;
 { Generator for Student's t distribution }
-const
-  RESOLUTION = 1000;
 begin
   if df < 1 then randomT := NaN
   else
