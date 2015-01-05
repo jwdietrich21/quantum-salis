@@ -34,12 +34,14 @@ uses
 function randomExp(a, rate: real): real;
 function randomGamma(a, b, c: real): real;
 function randomChisq(df: integer): real;
+function randomT(df: integer): real;
 function randomF(v, w: integer): real;
 function randomErlang(mean: real; k: integer): real;
 
 implementation
 
 function randomExp(a, rate: real): real;
+{ Generator for exponential distribution }
 const
   RESOLUTION = 1000;
 var
@@ -57,6 +59,7 @@ begin
 end;
 
 function randomGamma(a, b, c: real): real;
+{ Generator for gamma distribution }
 const
   RESOLUTION = 1000;
   T = 4.5;
@@ -130,13 +133,27 @@ begin
 end;
 
 function randomChisq(df: integer): real;
+{ Generator for chi square distribution }
 begin
   if df < 1 then randomChisq := NaN
   else
   randomChisq := randomGamma(0, 2, 0.5 * df);
 end;
 
+function randomT(df: integer): real;
+{ Generator for Student's t distribution }
+const
+  RESOLUTION = 1000;
+begin
+  if df < 1 then randomT := NaN
+  else
+  begin
+    randomT := randg(0, 1) / sqrt(randomChisq(df) / df);
+  end;
+end;
+
 function randomF(v, w: integer): real;
+{ Generator for F distribution }
 begin
   if (v < 1) or (w < 1) then
     randomF := NaN
@@ -145,6 +162,7 @@ begin
 end;
 
 function randomErlang(mean: real; k: integer): real;
+{ Generator for Erlang distribution }
 const
   RESOLUTION = 1000;
 var
