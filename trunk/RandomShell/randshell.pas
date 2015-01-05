@@ -182,7 +182,6 @@ begin
   end;
 end;
 
-
 procedure TRandomShellForm.expButtonClick(Sender: TObject);
 { Creates an exponential random number distribution }
 var
@@ -230,6 +229,7 @@ begin
 end;
 
 procedure TRandomShellForm.ErlangButtonClick(Sender: TObject);
+{ Creates variable from an Erlang distribution }
 var
   i, num: integer;
   k: integer;
@@ -313,6 +313,28 @@ begin
   end;
 end;
 
+procedure TRandomShellForm.tDistButtonClick(Sender: TObject);
+{ Creates a t distribution }
+var
+  i, num: integer;
+  df: integer;
+begin
+  num := CountSpin.Value;
+  df := df1Spin.Value;
+  ValuesGrid.Clear;
+  ValuesGrid.RowCount := num + 2;
+  DrawGridCaptions(ValuesGrid);
+  if df < 1 then
+    MessageDlg('df < 1', mtWarning, [mbOK], 0)
+  else
+  if num > 0 then
+    for i := 1 to num do
+    begin
+      ValuesGrid.Cells[0, i] := IntToStr(i);
+      ValuesGrid.Cells[1, i] := FloatToStr(randomT(df));
+    end;
+end;
+
 procedure TRandomShellForm.meanSpinChange(Sender: TObject);
 begin
   if meanSpin.Value <> 0 then rateSpin.Value := 1 / meanSpin.Value;
@@ -366,12 +388,6 @@ begin
   end;
   resultString := resultString + ')';
   OutputMemo.Lines.Add(resultString);
-end;
-
-procedure TRandomShellForm.tDistButtonClick(Sender: TObject);
-{ Creates a t distribution }
-begin
-
 end;
 
 end.

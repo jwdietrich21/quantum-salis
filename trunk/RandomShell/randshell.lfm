@@ -101,7 +101,7 @@ object RandomShellForm: TRandomShellForm
       Hint = 'Count of random numbers to be generated'
       Top = 12
       Width = 64
-      MaxValue = 1000
+      MaxValue = 10000
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
@@ -421,7 +421,6 @@ object RandomShellForm: TRandomShellForm
     Top = 120
     Width = 62
     Caption = 't'
-    Enabled = False
     OnClick = tDistButtonClick
     ParentShowHint = False
     ShowHint = True
