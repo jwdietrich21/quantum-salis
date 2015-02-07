@@ -24,7 +24,9 @@ unit rDist;
 { but WITHOUT ANY WARRANTY; without even the implied warranty of }
 { MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. }
 
-{$mode objfpc}{$H+}
+{$mode objfpc}
+{$H+}
+{$ASSERTIONS ON}
 
 interface
 
@@ -37,6 +39,7 @@ function randomChisq(df: integer): real;
 function randomT(df: integer): real;
 function randomF(v, w: integer): real;
 function randomErlang(mean: real; k: integer): real;
+function randomPoisson(mean: integer): integer;
 
 implementation
 
@@ -181,6 +184,26 @@ begin
     end;
     randomErlang := -mean * ln(prod);
   end;
+end;
+
+function randomPoisson(mean: integer): integer;
+{ Generator for Poisson distribution (Donald Knuth's algorithm) }
+const
+  RESOLUTION = 1000;
+var
+  k: integer;
+  b, l: real;
+begin
+  assert(mean > 0, 'mean < 1');
+  k := 0;
+  b := 1;
+  l := exp(-mean);
+  while b > l do
+  begin
+    k := k + 1;
+    b := b * random(RESOLUTION) / RESOLUTION;
+  end;
+  randomPoisson := k - 1;
 end;
 
 { Reference:
