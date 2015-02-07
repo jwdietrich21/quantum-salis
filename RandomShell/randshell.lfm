@@ -1,11 +1,11 @@
 object RandomShellForm: TRandomShellForm
   Left = 274
-  Height = 386
+  Height = 399
   Top = 132
-  Width = 671
+  Width = 691
   Caption = 'Random Number Generator'
-  ClientHeight = 386
-  ClientWidth = 671
+  ClientHeight = 399
+  ClientWidth = 691
   Constraints.MinHeight = 313
   Constraints.MinWidth = 670
   Menu = MainMenu1
@@ -16,10 +16,10 @@ object RandomShellForm: TRandomShellForm
     Left = 0
     Height = 96
     Top = 8
-    Width = 671
+    Width = 691
     Anchors = [akTop, akLeft, akRight]
     ClientHeight = 96
-    ClientWidth = 671
+    ClientWidth = 691
     TabOrder = 7
     object df1Label: TLabel
       Left = 8
@@ -337,7 +337,7 @@ object RandomShellForm: TRandomShellForm
   end
   object ValuesGrid: TStringGrid
     Left = 16
-    Height = 193
+    Height = 206
     Top = 160
     Width = 163
     Anchors = [akTop, akLeft, akBottom]
@@ -354,8 +354,8 @@ object RandomShellForm: TRandomShellForm
   object StatusBar: TStatusBar
     Left = 0
     Height = 15
-    Top = 371
-    Width = 671
+    Top = 384
+    Width = 691
     Panels = <>
   end
   object SVectorButton: TButton
@@ -365,7 +365,7 @@ object RandomShellForm: TRandomShellForm
     Left = 192
     Height = 23
     Top = 160
-    Width = 225
+    Width = 245
     BorderSpacing.Left = 13
     BorderSpacing.Right = 13
     Caption = '-> S vector'
@@ -373,10 +373,10 @@ object RandomShellForm: TRandomShellForm
     TabOrder = 3
   end
   object OutputMemo: TMemo
-    Left = 432
-    Height = 195
+    Left = 450
+    Height = 208
     Top = 160
-    Width = 222
+    Width = 224
     Anchors = [akTop, akLeft, akRight, akBottom]
     ScrollBars = ssAutoBoth
     TabOrder = 4
@@ -385,17 +385,18 @@ object RandomShellForm: TRandomShellForm
     Left = 192
     Height = 23
     Top = 192
-    Width = 225
+    Width = 245
     Caption = '-> StatPascal vector'
     OnClick = StatPascalVectorButtonClick
     TabOrder = 5
   end
   object ChisqButton: TButton
-    Left = 267
+    Left = 450
     Height = 24
     Hint = 'Creates a chi square distribution'
-    Top = 120
-    Width = 75
+    Top = 121
+    Width = 77
+    Anchors = [akTop, akRight]
     Caption = 'Chi square'
     OnClick = ChisqButtonClick
     ParentShowHint = False
@@ -403,11 +404,11 @@ object RandomShellForm: TRandomShellForm
     TabOrder = 8
   end
   object fButton: TButton
-    Left = 355
+    Left = 248
     Height = 24
     Hint = 'Creates an F distribution'
     Top = 120
-    Width = 62
+    Width = 45
     Caption = 'F'
     OnClick = fButtonClick
     ParentShowHint = False
@@ -419,7 +420,7 @@ object RandomShellForm: TRandomShellForm
     Height = 24
     Hint = 'Creates a t distribution'
     Top = 120
-    Width = 62
+    Width = 45
     Caption = 't'
     OnClick = tDistButtonClick
     ParentShowHint = False
@@ -427,11 +428,11 @@ object RandomShellForm: TRandomShellForm
     TabOrder = 10
   end
   object expButton: TButton
-    Left = 432
+    Left = 392
     Height = 24
     Hint = 'Creates an exponential distribution'
     Top = 120
-    Width = 62
+    Width = 45
     Caption = 'Exp'
     OnClick = expButtonClick
     ParentShowHint = False
@@ -439,11 +440,12 @@ object RandomShellForm: TRandomShellForm
     TabOrder = 11
   end
   object GammaButton: TButton
-    Left = 505
-    Height = 25
+    Left = 536
+    Height = 24
     Hint = 'Creates a Gamma distrituion'
     Top = 120
-    Width = 75
+    Width = 64
+    Anchors = [akTop, akRight]
     Caption = 'Gamma'
     OnClick = GammaButtonClick
     ParentShowHint = False
@@ -451,16 +453,29 @@ object RandomShellForm: TRandomShellForm
     TabOrder = 12
   end
   object ErlangButton: TButton
-    Left = 592
+    Left = 610
     Height = 24
     Hint = 'Creates a series of numbers from an Erlang distribution'
     Top = 120
-    Width = 62
+    Width = 64
+    Anchors = [akTop, akRight]
     Caption = 'Erlang'
     OnClick = ErlangButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 13
+  end
+  object PoissonButton: TButton
+    Left = 304
+    Height = 24
+    Hint = 'Creates variables from a Poisson distribution'
+    Top = 120
+    Width = 75
+    Caption = 'Poisson'
+    OnClick = PoissonButtonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 14
   end
   object MainMenu1: TMainMenu
     left = 208

@@ -38,6 +38,7 @@ type
 
   TRandomShellForm = class(TForm)
     bSpin: TFloatSpinEdit;
+    PoissonButton: TButton;
     cSpin: TFloatSpinEdit;
     bLabel: TLabel;
     cLabel: TLabel;
@@ -104,6 +105,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure GammaButtonClick(Sender: TObject);
     procedure meanSpinChange(Sender: TObject);
+    procedure PoissonButtonClick(Sender: TObject);
     procedure QuitItemClick(Sender: TObject);
     procedure rateSpinChange(Sender: TObject);
     procedure RNormButtonClick(Sender: TObject);
@@ -338,6 +340,30 @@ end;
 procedure TRandomShellForm.meanSpinChange(Sender: TObject);
 begin
   if meanSpin.Value <> 0 then rateSpin.Value := 1 / meanSpin.Value;
+end;
+
+procedure TRandomShellForm.PoissonButtonClick(Sender: TObject);
+{ creates variables from a Poisson distribution }
+var
+  i, num: integer;
+  mean: real;
+begin
+  mean := meanSpin.Value;
+  num := CountSpin.Value;
+  ValuesGrid.Clear;
+  ValuesGrid.RowCount := num + 2;
+  DrawGridCaptions(ValuesGrid);
+  if mean < 1 then
+    MessageDlg('mean < 1', mtWarning, [mbOK], 0)
+  else
+  begin
+    if num > 0 then
+      for i := 1 to num do
+      begin
+        ValuesGrid.Cells[0, i] := IntToStr(i);
+        ValuesGrid.Cells[1, i] := FloatToStr(randomPoisson(trunc(mean)));
+      end;
+  end;
 end;
 
 procedure TRandomShellForm.QuitItemClick(Sender: TObject);
