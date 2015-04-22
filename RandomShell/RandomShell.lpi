@@ -17,7 +17,8 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="37"/>
+      <BuildNr Value="38"/>
+      <Attributes pvaDebug="True"/>
       <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 1994-2015 J. W. Dietrich and others" LegalTrademarks="QUANTUM SALIS" ProductName="QUANTUM SALIS RandomShell" ProductVersion="1.0"/>
     </VersionInfo>
     <BuildModes Count="1">
@@ -42,7 +43,6 @@
       <Unit0>
         <Filename Value="RandomShell.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="RandomShell"/>
       </Unit0>
       <Unit1>
         <Filename Value="randshell.pas"/>
@@ -75,12 +75,6 @@
         </Win32>
       </Options>
     </Linking>
-    <Other>
-      <CompilerMessages>
-        <MsgFileName Value=""/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">
