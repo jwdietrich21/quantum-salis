@@ -9,7 +9,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos Y="2"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -18,11 +18,11 @@
         <ComponentName Value="RandomShellForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="randshell"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="340"/>
-        <CursorPos X="51" Y="361"/>
-        <UsageCount Value="38"/>
+        <TopLine Value="383"/>
+        <CursorPos X="9" Y="393"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -30,8 +30,8 @@
         <Filename Value="rdist.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="rDist"/>
-        <IsVisibleTab Value="True"/>
-        <UsageCount Value="33"/>
+        <CursorPos X="48" Y="11"/>
+        <UsageCount Value="34"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -55,124 +55,124 @@
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="rdist.pas"/>
-        <Caret Line="37" Column="37" TopLine="7"/>
+        <Filename Value="randshell.pas"/>
+        <Caret Line="265" Column="3" TopLine="259"/>
       </Position1>
       <Position2>
         <Filename Value="randshell.pas"/>
-        <Caret Line="334" Column="51" TopLine="248"/>
+        <Caret Line="143" Column="3" TopLine="137"/>
       </Position2>
       <Position3>
-        <Filename Value="rdist.pas"/>
-        <Caret Line="2"/>
+        <Filename Value="randshell.pas"/>
+        <Caret Line="170" Column="97" TopLine="162"/>
       </Position3>
       <Position4>
-        <Filename Value="rdist.pas"/>
-        <Caret Line="194" Column="5" TopLine="158"/>
+        <Filename Value="randshell.pas"/>
+        <Caret Line="168" Column="3" TopLine="162"/>
       </Position4>
       <Position5>
         <Filename Value="randshell.pas"/>
-        <Caret Line="2"/>
+        <Caret Line="324" Column="3" TopLine="318"/>
       </Position5>
       <Position6>
         <Filename Value="randshell.pas"/>
-        <Caret Line="141" Column="3" TopLine="135"/>
+        <Caret Line="265" Column="3" TopLine="259"/>
       </Position6>
       <Position7>
         <Filename Value="randshell.pas"/>
-        <Caret Line="166" Column="3" TopLine="160"/>
+        <Caret Line="194" Column="3" TopLine="187"/>
       </Position7>
       <Position8>
         <Filename Value="randshell.pas"/>
-        <Caret Line="322" Column="3" TopLine="316"/>
+        <Caret Line="217" Column="3" TopLine="211"/>
       </Position8>
       <Position9>
         <Filename Value="randshell.pas"/>
-        <Caret Line="215" Column="3" TopLine="209"/>
+        <Caret Line="296" Column="3" TopLine="290"/>
       </Position9>
       <Position10>
         <Filename Value="randshell.pas"/>
-        <Caret Line="263" Column="3" TopLine="257"/>
+        <Caret Line="240" Column="3" TopLine="233"/>
       </Position10>
       <Position11>
         <Filename Value="randshell.pas"/>
-        <Caret Line="192" Column="3" TopLine="185"/>
+        <Caret Line="348" Column="3" TopLine="345"/>
       </Position11>
       <Position12>
         <Filename Value="randshell.pas"/>
-        <Caret Line="294" Column="3" TopLine="288"/>
+        <Caret Line="186" TopLine="162"/>
       </Position12>
       <Position13>
-        <Filename Value="randshell.pas"/>
-        <Caret Line="238" Column="3" TopLine="231"/>
+        <Filename Value="rdist.pas"/>
+        <Caret Line="40" Column="23" TopLine="22"/>
       </Position13>
       <Position14>
-        <Filename Value="randshell.pas"/>
-        <Caret Line="240" Column="3" TopLine="233"/>
+        <Filename Value="rdist.pas"/>
+        <Caret Line="204" Column="30" TopLine="173"/>
       </Position14>
       <Position15>
-        <Filename Value="randshell.pas"/>
-        <Caret Line="330" Column="22" TopLine="311"/>
+        <Filename Value="rdist.pas"/>
+        <Caret Line="207" Column="12" TopLine="179"/>
       </Position15>
       <Position16>
         <Filename Value="randshell.pas"/>
-        <Caret Line="265" Column="3" TopLine="259"/>
+        <Caret Line="361" Column="51" TopLine="340"/>
       </Position16>
       <Position17>
         <Filename Value="randshell.pas"/>
-        <Caret Line="143" Column="3" TopLine="137"/>
+        <Caret Line="363" Column="52" TopLine="341"/>
       </Position17>
       <Position18>
         <Filename Value="randshell.pas"/>
-        <Caret Line="170" Column="97" TopLine="162"/>
+        <Caret Line="86" Column="12" TopLine="69"/>
       </Position18>
       <Position19>
         <Filename Value="randshell.pas"/>
-        <Caret Line="168" Column="3" TopLine="162"/>
+        <Caret Line="2" Column="39"/>
       </Position19>
       <Position20>
         <Filename Value="randshell.pas"/>
-        <Caret Line="324" Column="3" TopLine="318"/>
+        <Caret Line="85" Column="8" TopLine="56"/>
       </Position20>
       <Position21>
         <Filename Value="randshell.pas"/>
-        <Caret Line="265" Column="3" TopLine="259"/>
+        <Caret Line="86" Column="8" TopLine="57"/>
       </Position21>
       <Position22>
         <Filename Value="randshell.pas"/>
-        <Caret Line="194" Column="3" TopLine="187"/>
+        <Caret Line="24" Column="66"/>
       </Position22>
       <Position23>
         <Filename Value="randshell.pas"/>
-        <Caret Line="217" Column="3" TopLine="211"/>
+        <Caret Line="405" TopLine="384"/>
       </Position23>
       <Position24>
         <Filename Value="randshell.pas"/>
-        <Caret Line="296" Column="3" TopLine="290"/>
+        <Caret Line="406" TopLine="384"/>
       </Position24>
       <Position25>
         <Filename Value="randshell.pas"/>
-        <Caret Line="240" Column="3" TopLine="233"/>
+        <Caret Line="407" TopLine="384"/>
       </Position25>
       <Position26>
         <Filename Value="randshell.pas"/>
-        <Caret Line="348" Column="3" TopLine="345"/>
+        <Caret Line="408" TopLine="384"/>
       </Position26>
       <Position27>
         <Filename Value="randshell.pas"/>
-        <Caret Line="186" TopLine="162"/>
+        <Caret Line="416" TopLine="384"/>
       </Position27>
       <Position28>
-        <Filename Value="rdist.pas"/>
-        <Caret Line="40" Column="23" TopLine="22"/>
+        <Filename Value="randshell.pas"/>
+        <Caret Line="407" TopLine="384"/>
       </Position28>
       <Position29>
-        <Filename Value="rdist.pas"/>
-        <Caret Line="204" Column="30" TopLine="173"/>
+        <Filename Value="randshell.pas"/>
+        <Caret Line="408" TopLine="384"/>
       </Position29>
       <Position30>
-        <Filename Value="rdist.pas"/>
-        <Caret Line="207" Column="12" TopLine="179"/>
+        <Filename Value="randshell.pas"/>
+        <Caret Line="410" TopLine="384"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

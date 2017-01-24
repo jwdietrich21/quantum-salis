@@ -38,6 +38,7 @@ type
 
   TRandomShellForm = class(TForm)
     bSpin: TFloatSpinEdit;
+    ExplanationLabel: TLabel;
     PoissonButton: TButton;
     cSpin: TFloatSpinEdit;
     bLabel: TLabel;
@@ -388,7 +389,8 @@ begin
   begin
     for i := 1 to num - 3 do
     begin
-      resultString := resultString + ValuesGrid.Cells[1, i] + ', ';
+      if ValuesGrid.Cells[1, i] <> '' then
+        resultString := resultString + ValuesGrid.Cells[1, i] + ', ';
     end;
     resultString := resultString + ValuesGrid.Cells[1, num - 2];
   end;
@@ -408,7 +410,8 @@ begin
   begin
     for i := 1 to num - 3 do
     begin
-      resultString := resultString + ValuesGrid.Cells[1, i] + ', ';
+      if ValuesGrid.Cells[1, i] <> '' then
+        resultString := resultString + ValuesGrid.Cells[1, i] + ', ';
     end;
     resultString := resultString + ValuesGrid.Cells[1, num - 2];
   end;

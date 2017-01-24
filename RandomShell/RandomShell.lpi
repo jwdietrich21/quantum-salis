@@ -50,7 +50,6 @@
         <ComponentName Value="RandomShellForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="randshell"/>
       </Unit1>
       <Unit2>
         <Filename Value="rdist.pas"/>
