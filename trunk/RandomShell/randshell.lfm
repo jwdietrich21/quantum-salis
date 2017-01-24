@@ -11,7 +11,7 @@ object RandomShellForm: TRandomShellForm
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.2.6.0'
+  LCLVersion = '1.4.4.0'
   object ParamPanel: TPanel
     Left = 0
     Height = 96
@@ -68,6 +68,7 @@ object RandomShellForm: TRandomShellForm
     object ncpSpin: TSpinEdit
       Left = 305
       Height = 16
+      Hint = 'ncp (reserved)'
       Top = 40
       Width = 56
       TabOrder = 7
@@ -162,7 +163,7 @@ object RandomShellForm: TRandomShellForm
     object meanSpin: TSpinEdit
       Left = 430
       Height = 16
-      Hint = 'Mean value (Gaussian)'
+      Hint = 'Mean value (Gaussian and Poisson distribution)'
       Top = 12
       Width = 56
       OnChange = meanSpinChange
@@ -199,7 +200,7 @@ object RandomShellForm: TRandomShellForm
     object aSpin: TFloatSpinEdit
       Left = 55
       Height = 16
-      Hint = 'a (Gamma)'
+      Hint = 'a (Gamma and exponential distribution)'
       Top = 68
       Width = 64
       Increment = 0.01
@@ -214,7 +215,7 @@ object RandomShellForm: TRandomShellForm
     object bSpin: TFloatSpinEdit
       Left = 180
       Height = 16
-      Hint = 'b (Gamma)'
+      Hint = 'b (Gamma distribution)'
       Top = 68
       Width = 64
       Increment = 0.01
@@ -245,7 +246,7 @@ object RandomShellForm: TRandomShellForm
     object cSpin: TFloatSpinEdit
       Left = 305
       Height = 16
-      Hint = 'c (Gamma)'
+      Hint = 'c (Gamma distribution)'
       Top = 68
       Width = 56
       Increment = 0.01
@@ -253,6 +254,7 @@ object RandomShellForm: TRandomShellForm
       MinValue = 0
       OnChange = rateSpinChange
       ParentShowHint = False
+      ShowHint = True
       TabOrder = 11
       Value = 0
     end
@@ -315,7 +317,7 @@ object RandomShellForm: TRandomShellForm
     Left = 16
     Height = 24
     Hint = 'Creates a uniform random number distribution'
-    Top = 120
+    Top = 128
     Width = 75
     Caption = 'Uniform'
     OnClick = RUnifButtonClick
@@ -327,7 +329,7 @@ object RandomShellForm: TRandomShellForm
     Left = 104
     Height = 24
     Hint = 'Creates a normal (Gaussian) distribution'
-    Top = 120
+    Top = 128
     Width = 75
     Caption = 'Gaussian'
     OnClick = RNormButtonClick
@@ -364,12 +366,15 @@ object RandomShellForm: TRandomShellForm
     AnchorSideRight.Control = OutputMemo
     Left = 192
     Height = 23
+    Hint = 'Create vector for systems based on the S language (e.g. R, S-PLUS and Tibco Spotfire)'
     Top = 160
     Width = 245
     BorderSpacing.Left = 13
     BorderSpacing.Right = 13
     Caption = '-> S vector'
     OnClick = SVectorButtonClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 3
   end
   object OutputMemo: TMemo
@@ -384,17 +389,20 @@ object RandomShellForm: TRandomShellForm
   object StatPascalVectorButton: TButton
     Left = 192
     Height = 23
+    Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
     Top = 192
     Width = 245
     Caption = '-> StatPascal vector'
     OnClick = StatPascalVectorButtonClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 5
   end
   object ChisqButton: TButton
     Left = 450
     Height = 24
     Hint = 'Creates a chi square distribution'
-    Top = 121
+    Top = 129
     Width = 77
     Anchors = [akTop, akRight]
     Caption = 'Chi square'
@@ -407,7 +415,7 @@ object RandomShellForm: TRandomShellForm
     Left = 248
     Height = 24
     Hint = 'Creates an F distribution'
-    Top = 120
+    Top = 128
     Width = 45
     Caption = 'F'
     OnClick = fButtonClick
@@ -419,7 +427,7 @@ object RandomShellForm: TRandomShellForm
     Left = 192
     Height = 24
     Hint = 'Creates a t distribution'
-    Top = 120
+    Top = 128
     Width = 45
     Caption = 't'
     OnClick = tDistButtonClick
@@ -431,7 +439,7 @@ object RandomShellForm: TRandomShellForm
     Left = 392
     Height = 24
     Hint = 'Creates an exponential distribution'
-    Top = 120
+    Top = 128
     Width = 45
     Caption = 'Exp'
     OnClick = expButtonClick
@@ -443,7 +451,7 @@ object RandomShellForm: TRandomShellForm
     Left = 536
     Height = 24
     Hint = 'Creates a Gamma distrituion'
-    Top = 120
+    Top = 128
     Width = 64
     Anchors = [akTop, akRight]
     Caption = 'Gamma'
@@ -456,7 +464,7 @@ object RandomShellForm: TRandomShellForm
     Left = 610
     Height = 24
     Hint = 'Creates a series of numbers from an Erlang distribution'
-    Top = 120
+    Top = 128
     Width = 64
     Anchors = [akTop, akRight]
     Caption = 'Erlang'
@@ -469,13 +477,21 @@ object RandomShellForm: TRandomShellForm
     Left = 304
     Height = 24
     Hint = 'Creates variables from a Poisson distribution'
-    Top = 120
+    Top = 128
     Width = 75
     Caption = 'Poisson'
     OnClick = PoissonButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 14
+  end
+  object ExplanationLabel: TLabel
+    Left = 16
+    Height = 16
+    Top = 107
+    Width = 470
+    Caption = 'Click to generate random numbers with one of the following distributions:'
+    ParentColor = False
   end
   object MainMenu1: TMainMenu
     left = 208
