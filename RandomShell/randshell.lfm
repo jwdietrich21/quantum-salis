@@ -11,7 +11,7 @@ object RandomShellForm: TRandomShellForm
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '1.6.4.0'
   object ParamPanel: TPanel
     Left = 0
     Height = 96
@@ -492,6 +492,18 @@ object RandomShellForm: TRandomShellForm
     Width = 470
     Caption = 'Click to generate random numbers with one of the following distributions:'
     ParentColor = False
+  end
+  object DescStatButton: TButton
+    Left = 192
+    Height = 23
+    Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
+    Top = 224
+    Width = 245
+    Caption = '-> Descriptive Statistics'
+    OnClick = DescStatButtonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 15
   end
   object MainMenu1: TMainMenu
     left = 208
