@@ -30,7 +30,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Grids, ComCtrls, Spin, ExtCtrls, Menus, Math, rDist;
+  Grids, ComCtrls, Spin, ExtCtrls, Menus, Math, rDist, DescStat;
 
 type
 
@@ -44,6 +44,7 @@ type
     bLabel: TLabel;
     cLabel: TLabel;
     kLabel: TLabel;
+    DescStatButton: TButton;
     vLabel: TLabel;
     wLabel: TLabel;
     kSpin: TSpinEdit;
@@ -100,6 +101,7 @@ type
     ValuesGrid: TStringGrid;
     wSpin: TSpinEdit;
     procedure ChisqButtonClick(Sender: TObject);
+    procedure DescStatButtonClick(Sender: TObject);
     procedure ErlangButtonClick(Sender: TObject);
     procedure expButtonClick(Sender: TObject);
     procedure fButtonClick(Sender: TObject);
@@ -416,6 +418,31 @@ begin
     resultString := resultString + ValuesGrid.Cells[1, num - 2];
   end;
   resultString := resultString + ')';
+  OutputMemo.Lines.Add(resultString);
+end;
+
+procedure TRandomShellForm.DescStatButtonClick(Sender: TObject);
+var
+  i, num: integer;
+  theData: array of Extended;
+  resultString: string;
+begin
+  OutputMemo.Lines.Clear;
+  resultString := '';
+  num := ValuesGrid.RowCount;
+  SetLength(theData, num - 2);
+  if num > 2 then
+  begin
+    for i := 1 to num - 2 do
+    begin
+      if ValuesGrid.Cells[1, i] <> '' then
+        theData[i - 1] := StrToFloat(ValuesGrid.Cells[1, i]);
+    end;
+  end;
+  resultString := resultString + 'Mean: ' + FloatToStr(mean(theData)) + LineEnding;
+  resultString := resultString + 'Standard Deviation: ' + FloatToStr(stddev(theData)) + LineEnding;
+  resultString := resultString + 'Variance: ' + FloatToStr(variance(theData)) + LineEnding;
+  resultString := resultString + 'SEM: ' + FloatToStr(sem(theData)) + LineEnding;
   OutputMemo.Lines.Add(resultString);
 end;
 

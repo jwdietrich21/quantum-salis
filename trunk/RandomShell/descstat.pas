@@ -1,10 +1,10 @@
-program RandomShell;
+unit DescStat;
 
 { QUANTUM SALIS }
 
 { Statistical algorithms for life sciences }
 
-{ GUI shell for investigation of statistical distributions }
+{ Unit with algorithms for statistical distributions }
 
 { Version 1.0.0 }
 
@@ -26,21 +26,19 @@ program RandomShell;
 
 {$mode objfpc}{$H+}
 
+interface
+
 uses
-  {$IFDEF UNIX}{$IFDEF UseCThreads}
-  cthreads,
-  {$ENDIF}{$ENDIF}
-  Interfaces, // this includes the LCL widgetset
-  Forms, randshell, rDist, DescStat
-  { you can add units after this };
+  Classes, SysUtils, math;
 
-{$R *.res}
+function sem(const data: array of Extended): real;
 
-begin
-  RequireDerivedFormResource := True;
-  Application.Initialize;
-  Application.CreateForm(TRandomShellForm, RandomShellForm);
-  randomize;
-  Application.Run;
+implementation
+
+function sem(const data: array of Extended): real;
+  begin
+    sem := stddev(data) / sqrt(length(data));
+  end;
+
 end.
 
