@@ -11,7 +11,7 @@ object RandomShellForm: TRandomShellForm
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.4.4.0'
   object ParamPanel: TPanel
     Left = 0
     Height = 96
@@ -371,7 +371,7 @@ object RandomShellForm: TRandomShellForm
     Width = 245
     BorderSpacing.Left = 13
     BorderSpacing.Right = 13
-    Caption = '-> S vector'
+    Caption = 'S vector ->'
     OnClick = SVectorButtonClick
     ParentShowHint = False
     ShowHint = True
@@ -392,7 +392,7 @@ object RandomShellForm: TRandomShellForm
     Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
     Top = 192
     Width = 245
-    Caption = '-> StatPascal vector'
+    Caption = 'StatPascal vector ->'
     OnClick = StatPascalVectorButtonClick
     ParentShowHint = False
     ShowHint = True
@@ -499,7 +499,7 @@ object RandomShellForm: TRandomShellForm
     Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
     Top = 224
     Width = 245
-    Caption = '-> Descriptive Statistics'
+    Caption = 'Descriptive Statistics ->'
     OnClick = DescStatButtonClick
     ParentShowHint = False
     ShowHint = True

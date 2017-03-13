@@ -440,8 +440,10 @@ begin
     end;
   end;
   resultString := resultString + 'Mean: ' + FloatToStr(mean(theData)) + LineEnding;
+  resultString := resultString + 'Median: ' + FloatToStr(median(theData)) + LineEnding;
   resultString := resultString + 'Standard Deviation: ' + FloatToStr(stddev(theData)) + LineEnding;
   resultString := resultString + 'Variance: ' + FloatToStr(variance(theData)) + LineEnding;
+  resultString := resultSTring + 'CoV: ' + FloatToStr(cv(theData)) + LineEnding;
   resultString := resultString + 'SEM: ' + FloatToStr(sem(theData)) + LineEnding;
   OutputMemo.Lines.Add(resultString);
 end;
