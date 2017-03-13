@@ -31,14 +31,35 @@ interface
 uses
   Classes, SysUtils, math;
 
-function sem(const data: array of Extended): real;
+type
+  TExtArray = array of Extended;
+
+function sem(const data: TExtArray): real;
+function median(const data: TExtArray): real;
 
 implementation
 
-function sem(const data: array of Extended): real;
+function SortExtArray(const data: TExtArray): TExtArray;
+begin
+end;
+
+function sem(const data: TExtArray): real;
   begin
     sem := stddev(data) / sqrt(length(data));
   end;
+
+function median(const data: TExtArray): real;
+var
+  centralElement: integer;
+  sortedData: TExtArray;
+begin
+  SortExtArray(data);
+  centralElement := length(sortedData) div 2;
+  if odd(length(sortedData)) then
+    result := sortedData[centralElement]
+  else
+    result := (sortedData[centralElement - 1] + sortedData[centralElement]) / 2;
+end;
 
 end.
 
