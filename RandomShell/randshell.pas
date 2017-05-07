@@ -30,7 +30,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Grids, ComCtrls, Spin, ExtCtrls, Menus, Math, rDist, DescStat;
+  Grids, ComCtrls, Spin, ExtCtrls, Menus, Math,
+  rDist, DescStat;
 
 type
 
