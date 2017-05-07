@@ -4,7 +4,7 @@ unit rDist;
 
 { Statistical algorithms for life sciences }
 
-{ Unit with algorithms for statistical distributions }
+{ This unit provides algorithms for statistical distributions }
 
 { Version 1.0.0 }
 
