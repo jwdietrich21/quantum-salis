@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="9"/>
+    <Version Value="10"/>
     <General>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
@@ -17,7 +17,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="46"/>
+      <BuildNr Value="47"/>
       <Attributes pvaDebug="True"/>
       <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 1994-2017 J. W. Dietrich and others" LegalTrademarks="QUANTUM SALIS" ProductName="QUANTUM SALIS RandomShell" ProductVersion="1.0"/>
     </VersionInfo>
@@ -52,12 +52,12 @@
         <ResourceBaseClass Value="Form"/>
       </Unit1>
       <Unit2>
-        <Filename Value="rdist.pas"/>
+        <Filename Value="../rdist.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="rDist"/>
       </Unit2>
       <Unit3>
-        <Filename Value="descstat.pas"/>
+        <Filename Value="../descstat.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="DescStat"/>
       </Unit3>
@@ -70,6 +70,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value=".."/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

@@ -1,7 +1,7 @@
 object RandomShellForm: TRandomShellForm
-  Left = 274
+  Left = 373
   Height = 399
-  Top = 132
+  Top = 246
   Width = 691
   Caption = 'Random Number Generator'
   ClientHeight = 399
@@ -11,7 +11,7 @@ object RandomShellForm: TRandomShellForm
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '1.6.4.0'
   object ParamPanel: TPanel
     Left = 0
     Height = 96

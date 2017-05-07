@@ -31,8 +31,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, randshell, rDist, DescStat
-  { you can add units after this };
+  Forms, randshell, rDist, DescStat;
 
 {$R *.res}
 
