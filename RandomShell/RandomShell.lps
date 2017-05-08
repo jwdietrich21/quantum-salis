@@ -43,56 +43,56 @@
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
+        <Filename Value="../qsfoundation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="qsFoundation"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
         <Filename Value="rdist.pas"/>
         <UnitName Value="rDist"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="2"/>
         <UsageCount Value="38"/>
-      </Unit4>
-      <Unit5>
+      </Unit5>
+      <Unit6>
         <Filename Value="descstat.pas"/>
         <UnitName Value="DescStat"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="2"/>
         <UsageCount Value="24"/>
-      </Unit5>
-      <Unit6>
+      </Unit6>
+      <Unit7>
         <Filename Value="/Developer/lazarus/lcl/grids.pas"/>
         <TopLine Value="8660"/>
         <CursorPos Y="8675"/>
         <UsageCount Value="10"/>
-      </Unit6>
-      <Unit7>
+      </Unit7>
+      <Unit8>
         <Filename Value="/usr/local/share/fpcsrc/rtl/inc/systemh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="807"/>
         <CursorPos X="11" Y="825"/>
         <UsageCount Value="10"/>
-      </Unit7>
-      <Unit8>
+      </Unit8>
+      <Unit9>
         <Filename Value="/usr/local/share/fpcsrc/rtl/objpas/math.pp"/>
         <TopLine Value="407"/>
         <CursorPos X="10" Y="425"/>
         <UsageCount Value="10"/>
-      </Unit8>
-      <Unit9>
+      </Unit9>
+      <Unit10>
         <Filename Value="/usr/local/share/fpcsrc/rtl/objpas/classes/classesh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="181"/>
         <CursorPos X="19" Y="198"/>
         <UsageCount Value="10"/>
-      </Unit9>
-      <Unit10>
-        <Filename Value="../qsfoundation.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="qsFoundation"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="46" Y="95"/>
-        <UsageCount Value="23"/>
-        <Loaded Value="True"/>
       </Unit10>
     </Units>
-    <JumpHistory Count="20" HistoryIndex="19">
+    <JumpHistory Count="21" HistoryIndex="20">
       <Position1>
         <Filename Value="randshell.pas"/>
         <Caret Line="446" Column="80" TopLine="414"/>
@@ -173,6 +173,10 @@
         <Filename Value="../qsfoundation.pas"/>
         <Caret Line="81" Column="13" TopLine="55"/>
       </Position20>
+      <Position21>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="70" Column="9" TopLine="49"/>
+      </Position21>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

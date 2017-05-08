@@ -67,6 +67,8 @@ type
 
 function add(const vec1: TIntVector; const vec2: TIntVector): TIntVector;
 
+operator + (const vec1: TIntVector; const vec2: TIntVector): TIntVector;
+
 implementation
 
 function add(const vec1: TIntVector; const vec2: TIntVector): TIntVector;
@@ -75,6 +77,8 @@ var
 begin
   k := vec1.getlength;
   l := vec2.getlength;
+  if (k > 0) or (l > 0) then
+    result.Create;
   if k = l then
   begin
     setlength(result.data, k);
@@ -97,6 +101,11 @@ begin
     for i := l to k do
       result.data[i] := vec1.data[i];
   end;
+end;
+
+operator + (const vec1: TIntVector; const vec2: TIntVector): TIntVector;
+begin
+  result := add(vec1, vec2);
 end;
 
 { TIntVector }
