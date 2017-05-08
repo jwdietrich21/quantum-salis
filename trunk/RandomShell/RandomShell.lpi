@@ -17,7 +17,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="48"/>
+      <BuildNr Value="59"/>
       <Attributes pvaDebug="True"/>
       <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 1994-2017 J. W. Dietrich and others" LegalTrademarks="QUANTUM SALIS" ProductName="QUANTUM SALIS RandomShell" ProductVersion="1.0"/>
     </VersionInfo>
@@ -39,7 +39,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="4">
+    <Units Count="5">
       <Unit0>
         <Filename Value="RandomShell.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -61,6 +61,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="DescStat"/>
       </Unit3>
+      <Unit4>
+        <Filename Value="../qsfoundation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="qsFoundation"/>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

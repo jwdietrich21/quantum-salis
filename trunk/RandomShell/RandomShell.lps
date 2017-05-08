@@ -3,13 +3,13 @@
   <ProjectSession>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="10">
+    <Units Count="11">
       <Unit0>
         <Filename Value="RandomShell.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <CursorPos X="36" Y="34"/>
-        <UsageCount Value="43"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="16" Y="2"/>
+        <UsageCount Value="46"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -18,9 +18,9 @@
         <ComponentName Value="RandomShellForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <CursorPos Y="2"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="46"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -28,18 +28,18 @@
         <Filename Value="../rdist.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="rDist"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="14" Y="2"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="20" Y="2"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="../descstat.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="DescStat"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="5" Y="2"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="10" Y="2"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -82,8 +82,17 @@
         <CursorPos X="19" Y="198"/>
         <UsageCount Value="10"/>
       </Unit9>
+      <Unit10>
+        <Filename Value="../qsfoundation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="qsFoundation"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="46" Y="95"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit10>
     </Units>
-    <JumpHistory Count="5" HistoryIndex="4">
+    <JumpHistory Count="20" HistoryIndex="19">
       <Position1>
         <Filename Value="randshell.pas"/>
         <Caret Line="446" Column="80" TopLine="414"/>
@@ -104,6 +113,66 @@
         <Filename Value="randshell.pas"/>
         <Caret Line="34" Column="18"/>
       </Position5>
+      <Position6>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Column="26"/>
+      </Position6>
+      <Position7>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="53" Column="26" TopLine="5"/>
+      </Position7>
+      <Position8>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="54" Column="26" TopLine="12"/>
+      </Position8>
+      <Position9>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="69" Column="22" TopLine="31"/>
+      </Position9>
+      <Position10>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="83" Column="26" TopLine="35"/>
+      </Position10>
+      <Position11>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="59" Column="45" TopLine="39"/>
+      </Position11>
+      <Position12>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="63" Column="25" TopLine="31"/>
+      </Position12>
+      <Position13>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="92" Column="29" TopLine="73"/>
+      </Position13>
+      <Position14>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="68" Column="13" TopLine="40"/>
+      </Position14>
+      <Position15>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="75" Column="6" TopLine="54"/>
+      </Position15>
+      <Position16>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="68" Column="76" TopLine="44"/>
+      </Position16>
+      <Position17>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="72" Column="37" TopLine="44"/>
+      </Position17>
+      <Position18>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="80" Column="38" TopLine="57"/>
+      </Position18>
+      <Position19>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="79" Column="24" TopLine="56"/>
+      </Position19>
+      <Position20>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="81" Column="13" TopLine="55"/>
+      </Position20>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

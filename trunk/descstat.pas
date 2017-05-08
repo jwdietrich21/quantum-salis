@@ -29,7 +29,8 @@ unit DescStat;
 interface
 
 uses
-  Classes, SysUtils, math;
+  Classes, SysUtils, Math,
+  qsFoundation;
 
 type
   TExtArray = array of Extended;
