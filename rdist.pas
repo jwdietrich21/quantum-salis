@@ -31,7 +31,8 @@ unit rDist;
 interface
 
 uses
-  Classes, SysUtils, Math;
+  Classes, SysUtils, Math,
+  qsFoundation;
 
 function randomExp(a, rate: real): real;
 function randomGamma(a, b, c: real): real;
