@@ -8,10 +8,10 @@ program RandomShell;
 
 { Version 1.0.0 }
 
-{ (c) J. W. Dietrich, 1994 - 2017 }
+{ (c) J. W. Dietrich, 1994 - 2018 }
 { (c) Ludwig Maximilian University of Munich 1995 - 2002 }
 { (c) University of Ulm Hospitals 2002-2004 }
-{ (c) Ruhr University of Bochum 2005 - 2017 }
+{ (c) Ruhr University of Bochum 2005 - 2018 }
 
 { Source code released under the BSD License }
 
