@@ -5,73 +5,72 @@
     <General>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="RandomShell"/>
+      <Title Value="qstests"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
     </General>
-    <i18n>
-      <EnableI18N LFM="False"/>
-    </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="64"/>
+      <BuildNr Value="7"/>
       <Attributes pvaDebug="True"/>
-      <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 1994-2018 J. W. Dietrich and others" LegalTrademarks="QUANTUM SALIS" ProductName="QUANTUM SALIS RandomShell" ProductVersion="1.0"/>
+      <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 1994-2018 J. W. Dietrich and others" LegalTrademarks="QUANTUM SALIS" ProductVersion="1.0"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
-      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
-      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
     </PublishOptions>
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="1">
+    <RequiredPackages Count="3">
       <Item1>
-        <PackageName Value="LCL"/>
+        <PackageName Value="fpcunittestrunner"/>
       </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
     </RequiredPackages>
     <Units Count="5">
       <Unit0>
-        <Filename Value="RandomShell.lpr"/>
+        <Filename Value="qstests.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="randshell.pas"/>
+        <Filename Value="qstestcases.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="RandomShellForm"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="qsTestCases"/>
       </Unit1>
       <Unit2>
-        <Filename Value="../rdist.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="rDist"/>
-      </Unit2>
-      <Unit3>
         <Filename Value="../descstat.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="DescStat"/>
-      </Unit3>
-      <Unit4>
+      </Unit2>
+      <Unit3>
         <Filename Value="../qsfoundation.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="qsFoundation"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../rdist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="rDist"/>
       </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="RandomShell"/>
+      <Filename Value="qstests"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
