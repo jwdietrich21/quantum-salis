@@ -14,7 +14,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="7"/>
+      <BuildNr Value="12"/>
       <Attributes pvaDebug="True"/>
       <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 1994-2018 J. W. Dietrich and others" LegalTrademarks="QUANTUM SALIS" ProductVersion="1.0"/>
     </VersionInfo>

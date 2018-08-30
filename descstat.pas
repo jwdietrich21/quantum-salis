@@ -36,8 +36,11 @@ type
   TExtArray = array of Extended;
 
 function sem(const data: TExtArray): extended;
+function sem(const data: TExtVector): extended;
 function median(const data: TExtArray): extended;
+function median(const data: TExtVector): extended;
 function cv(const data: TExtArray): extended;
+function cv(const data: TExtVector): extended;
 
 implementation
 
@@ -79,6 +82,11 @@ function sem(const data: TExtArray): extended;
     sem := stddev(data) / sqrt(length(data));
   end;
 
+function sem(const data: TExtVector): extended;
+begin
+  result := sem(data.data);
+end;
+
 function median(const data: TExtArray): extended;
 { calculates the median (50% quantile) of a vector of extended }
 var
@@ -93,10 +101,20 @@ begin
     result := (sortedData[centralElement - 1] + sortedData[centralElement]) / 2;
 end;
 
+function median(const data: TExtVector): extended;
+begin
+  result := median(data.data);
+end;
+
 function cv(const data: TExtArray): extended;
 { calculates the coefficient of variation (CV or CoV) of a vector of extended }
 begin
   result := stddev(data) / mean(data);
+end;
+
+function cv(const data: TExtVector): extended;
+begin
+  result := cv(data.data);
 end;
 
 end.

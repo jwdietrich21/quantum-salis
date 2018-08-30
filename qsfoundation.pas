@@ -63,6 +63,7 @@ type
   TLogicVector = class
     data: TLogicVector_data;
     constructor Create;
+    destructor Destroy; override;
     procedure InitFalse(length: longint);
     procedure InitTrue(length: longint);
     function getlength: longint;
@@ -73,6 +74,7 @@ type
   TIntVector = class
     data: TIntVector_data;
     constructor Create;
+    destructor Destroy; override;
     procedure InitZero(length: longint);
     procedure InitOne(length: longint);
     function getlength: longint;
@@ -83,14 +85,43 @@ type
   TLongintVector = class
     data: TLongintvector_data;
     constructor Create;
+    destructor Destroy; override;
     procedure InitZero(length: longint);
     procedure InitOne(length: longint);
     function getlength: longint;
   end;
 
-  function add(const vec1: TIntVector; const vec2: TIntVector): TIntVector;
+  { TRealVector }
+
+  TRealVector = class
+    data: TRealvector_data;
+    constructor Create;
+    destructor Destroy; override;
+    procedure InitZero(length: longint);
+    procedure InitOne(length: longint);
+    function getlength: longint;
+  end;
+
+  { TExtVector }
+
+  TExtVector = class
+    data: TExtVector_data;
+    constructor Create;
+    destructor Destroy; override;
+    procedure InitZero(length: longint);
+    procedure InitOne(length: longint);
+    function getlength: longint;
+  end;
+
+function add(const vec1: TIntVector; const vec2: TIntVector): TIntVector;
+function add(const vec1: TLongintVector; const vec2: TLongintVector): TLongintVector;
+function add(const vec1: TRealVector; const vec2: TRealVector): TRealVector;
+function add(const vec1: TExtVector; const vec2: TExtVector): TExtVector;
 
 operator + (const vec1: TIntVector; const vec2: TIntVector): TIntVector;
+operator + (const vec1: TLongintVector; const vec2: TLongintVector): TLongintVector;
+operator + (const vec1: TRealVector; const vec2: TRealVector): TRealVector;
+operator + (const vec1: TExtVector; const vec2: TExtVector): TExtVector;
 
 implementation
 
@@ -114,7 +145,7 @@ begin
       setlength(result.data, l);
       for i := 0 to k - 1 do
         result.data[i] := vec1.data[i] + vec2.data[i];
-      for i := k to l do
+      for i := k to l - 1 do
         result.data[i] := vec2.data[i];
     end
     else
@@ -122,7 +153,116 @@ begin
       setlength(result.data, k);
       for i := 0 to l - 1 do
         result.data[i] := vec1.data[i] + vec2.data[i];
-      for i := l to k do
+      for i := l to k - 1 do
+        result.data[i] := vec1.data[i];
+    end;
+  end
+  else
+    result := nil;
+end;
+
+function add(const vec1: TLongintVector; const vec2: TLongintVector
+  ): TLongintVector;
+var
+  i, k, l: longint;
+begin
+  k := vec1.getlength;
+  l := vec2.getlength;
+  if (k > 0) or (l > 0) then
+  begin
+    result := TLongintVector.Create;
+    if k = l then
+    begin
+      setlength(result.data, k);
+      for i := 0 to k - 1 do
+        result.data[i] := vec1.data[i] + vec2.data[i];
+    end
+    else if k < l then
+    begin
+      setlength(result.data, l);
+      for i := 0 to k - 1 do
+        result.data[i] := vec1.data[i] + vec2.data[i];
+      for i := k to l - 1 do
+        result.data[i] := vec2.data[i];
+    end
+    else
+    begin
+      setlength(result.data, k);
+      for i := 0 to l - 1 do
+        result.data[i] := vec1.data[i] + vec2.data[i];
+      for i := l to k - 1 do
+        result.data[i] := vec1.data[i];
+    end;
+  end
+  else
+    result := nil;
+end;
+
+function add(const vec1: TRealVector; const vec2: TRealVector): TRealVector;
+var
+  i, k, l: longint;
+begin
+  k := vec1.getlength;
+  l := vec2.getlength;
+  if (k > 0) or (l > 0) then
+  begin
+    result := TRealVector.Create;
+    if k = l then
+    begin
+      setlength(result.data, k);
+      for i := 0 to k - 1 do
+        result.data[i] := vec1.data[i] + vec2.data[i];
+    end
+    else if k < l then
+    begin
+      setlength(result.data, l);
+      for i := 0 to k - 1 do
+        result.data[i] := vec1.data[i] + vec2.data[i];
+      for i := k to l - 1 do
+        result.data[i] := vec2.data[i];
+    end
+    else
+    begin
+      setlength(result.data, k);
+      for i := 0 to l - 1 do
+        result.data[i] := vec1.data[i] + vec2.data[i];
+      for i := l to k - 1 do
+        result.data[i] := vec1.data[i];
+    end;
+  end
+  else
+    result := nil;
+end;
+
+function add(const vec1: TExtVector; const vec2: TExtVector): TExtVector;
+var
+  i, k, l: longint;
+begin
+  k := vec1.getlength;
+  l := vec2.getlength;
+  if (k > 0) or (l > 0) then
+  begin
+    result := TExtVector.Create;
+    if k = l then
+    begin
+      setlength(result.data, k);
+      for i := 0 to k - 1 do
+        result.data[i] := vec1.data[i] + vec2.data[i];
+    end
+    else if k < l then
+    begin
+      setlength(result.data, l);
+      for i := 0 to k - 1 do
+        result.data[i] := vec1.data[i] + vec2.data[i];
+      for i := k to l - 1 do
+        result.data[i] := vec2.data[i];
+    end
+    else
+    begin
+      setlength(result.data, k);
+      for i := 0 to l - 1 do
+        result.data[i] := vec1.data[i] + vec2.data[i];
+      for i := l to k - 1 do
         result.data[i] := vec1.data[i];
     end;
   end
@@ -135,11 +275,33 @@ begin
   result := add(vec1, vec2);
 end;
 
+operator + (const vec1: TLongintVector; const vec2: TLongintVector
+  ): TLongintVector;
+begin
+  result := add(vec1, vec2);
+end;
+
+operator + (const vec1: TRealVector; const vec2: TRealVector): TRealVector;
+begin
+  result := add(vec1, vec2);
+end;
+
+operator + (const vec1: TExtVector; const vec2: TExtVector): TExtVector;
+begin
+  result := add(vec1, vec2);
+end;
+
 { TIntVector }
 
 constructor TIntVector.Create;
 begin
+  inherited Create;
   SetLength(data, 0);
+end;
+
+destructor TIntVector.Destroy;
+begin
+  inherited Destroy;
 end;
 
 procedure TIntVector.InitZero(length: longint);
@@ -169,7 +331,13 @@ end;
 
 constructor TLongintVector.Create;
 begin
+  inherited Create;
   SetLength(data, 0);
+end;
+
+destructor TLongintVector.Destroy;
+begin
+  inherited Destroy;
 end;
 
 procedure TLongintVector.InitZero(length: longint);
@@ -195,11 +363,87 @@ begin
   result := length(data);
 end;
 
+{ TRealVector }
+
+constructor TRealVector.Create;
+begin
+  inherited Create;
+  SetLength(data, 0);
+end;
+
+destructor TRealVector.Destroy;
+begin
+  inherited Destroy;
+end;
+
+procedure TRealVector.InitZero(length: longint);
+var
+  i: longint;
+begin
+  SetLength(data, length);
+  for i := 0 to length - 1 do
+    data[i] := 0;
+end;
+procedure TRealVector.InitOne(length: longint);
+var
+  i: longint;
+begin
+  SetLength(data, length);
+  for i := 0 to length - 1 do
+    data[i] := 1;
+end;
+function TRealVector.getlength: longint;
+begin
+  result := length(data);
+end;
+
+{ TExtVector }
+
+constructor TExtVector.Create;
+begin
+  inherited Create;
+  SetLength(data, 0);
+end;
+
+destructor TExtVector.Destroy;
+begin
+  inherited Destroy;
+end;
+
+procedure TExtVector.InitZero(length: longint);
+var
+  i: longint;
+begin
+  SetLength(data, length);
+  for i := 0 to length - 1 do
+    data[i] := 0;
+end;
+
+procedure TExtVector.InitOne(length: longint);
+var
+  i: longint;
+begin
+  SetLength(data, length);
+  for i := 0 to length - 1 do
+    data[i] := 1;
+end;
+
+function TExtVector.getlength: longint;
+begin
+  result := length(data);
+end;
+
 { TLogicVector }
 
 constructor TLogicVector.Create;
 begin
+  inherited Create;
   SetLength(data, 0);
+end;
+
+destructor TLogicVector.Destroy;
+begin
+  inherited Destroy;
 end;
 
 procedure TLogicVector.InitFalse(length: longint);

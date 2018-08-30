@@ -8,10 +8,10 @@ unit randshell;
 
 { Version 1.0.0 }
 
-{ (c) J. W. Dietrich, 1994 - 2017 }
+{ (c) J. W. Dietrich, 1994 - 2018 }
 { (c) Ludwig Maximilian University of Munich 1995 - 2002 }
 { (c) University of Ulm Hospitals 2002-2004 }
-{ (c) Ruhr University of Bochum 2005 - 2017 }
+{ (c) Ruhr University of Bochum 2005 - 2018 }
 
 { Source code released under the BSD License }
 
@@ -31,7 +31,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   Grids, ComCtrls, Spin, ExtCtrls, Menus, Math,
-  rDist, DescStat;
+  qsFoundation, rDist, DescStat;
 
 type
 
@@ -424,28 +424,30 @@ end;
 procedure TRandomShellForm.DescStatButtonClick(Sender: TObject);
 var
   i, num: integer;
-  theData: array of Extended;
+  theData: TExtVector;
   resultString: string;
 begin
   OutputMemo.Lines.Clear;
   resultString := '';
+  theData := TExtVector.Create;
   num := ValuesGrid.RowCount;
-  SetLength(theData, num - 2);
+  SetLength(theData.data, num - 2);
   if num > 2 then
   begin
     for i := 1 to num - 2 do
     begin
       if ValuesGrid.Cells[1, i] <> '' then
-        theData[i - 1] := StrToFloat(ValuesGrid.Cells[1, i]);
+        theData.data[i - 1] := StrToFloat(ValuesGrid.Cells[1, i]);
     end;
   end;
-  resultString := resultString + 'Mean: ' + FloatToStr(mean(theData)) + LineEnding;
-  resultString := resultString + 'Median: ' + FloatToStr(median(theData)) + LineEnding;
-  resultString := resultString + 'Standard Deviation: ' + FloatToStr(stddev(theData)) + LineEnding;
-  resultString := resultString + 'Variance: ' + FloatToStr(variance(theData)) + LineEnding;
-  resultString := resultSTring + 'CoV: ' + FloatToStr(cv(theData)) + LineEnding;
-  resultString := resultString + 'SEM: ' + FloatToStr(sem(theData)) + LineEnding;
+  resultString := resultString + 'Mean: ' + FloatToStr(mean(theData.data)) + LineEnding; // array form
+  resultString := resultString + 'Median: ' + FloatToStr(median(theData)) + LineEnding; // vector object form
+  resultString := resultString + 'Standard Deviation: ' + FloatToStr(stddev(theData.data)) + LineEnding; // array form
+  resultString := resultString + 'Variance: ' + FloatToStr(variance(theData.data)) + LineEnding; // array form
+  resultString := resultSTring + 'CoV: ' + FloatToStr(cv(theData)) + LineEnding; // vector object form
+  resultString := resultString + 'SEM: ' + FloatToStr(sem(theData)) + LineEnding; // vector object form
   OutputMemo.Lines.Add(resultString);
+  theData.Destroy;
 end;
 
 end.
