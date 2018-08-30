@@ -19,7 +19,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="3"/>
-        <CursorPos Y="2"/>
+        <CursorPos Y="195"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -38,6 +38,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="DescStat"/>
         <EditorIndex Value="2"/>
+        <TopLine Value="7"/>
         <CursorPos X="10" Y="2"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
@@ -47,7 +48,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="qsFoundation"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos Y="2"/>
+        <TopLine Value="138"/>
+        <CursorPos X="27" Y="167"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit4>
@@ -92,7 +94,7 @@
         <UsageCount Value="10"/>
       </Unit10>
     </Units>
-    <JumpHistory Count="21" HistoryIndex="20">
+    <JumpHistory Count="24" HistoryIndex="23">
       <Position1>
         <Filename Value="randshell.pas"/>
         <Caret Line="446" Column="80" TopLine="414"/>
@@ -177,6 +179,18 @@
         <Filename Value="../qsfoundation.pas"/>
         <Caret Line="70" Column="9" TopLine="49"/>
       </Position21>
+      <Position22>
+        <Filename Value="randshell.pas"/>
+        <Caret Line="2"/>
+      </Position22>
+      <Position23>
+        <Filename Value="randshell.pas"/>
+        <Caret Line="195" Column="3" TopLine="178"/>
+      </Position23>
+      <Position24>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="72" Column="25" TopLine="63"/>
+      </Position24>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

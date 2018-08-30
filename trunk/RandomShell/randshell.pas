@@ -192,7 +192,6 @@ procedure TRandomShellForm.expButtonClick(Sender: TObject);
 { Creates an exponential random number distribution }
 var
   i, num: integer;
-  min, max: integer;
   a, rate: real;
 begin
   num := CountSpin.Value;
