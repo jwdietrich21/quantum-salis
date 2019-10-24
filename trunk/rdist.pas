@@ -8,10 +8,10 @@ unit rDist;
 
 { Version 1.0.0 }
 
-{ (c) J. W. Dietrich, 1994 - 2018 }
+{ (c) J. W. Dietrich, 1994 - 2019 }
 { (c) Ludwig Maximilian University of Munich 1995 - 2002 }
 { (c) University of Ulm Hospitals 2002-2004 }
-{ (c) Ruhr University of Bochum 2005 - 2018 }
+{ (c) Ruhr University of Bochum 2005 - 2019 }
 
 { Source code released under the BSD License }
 
@@ -41,6 +41,7 @@ function randomT(df: integer): real;
 function randomF(v, w: integer): real;
 function randomErlang(mean: real; k: integer): real;
 function randomPoisson(mean: integer): integer;
+function probGaussian(x: real): real;
 
 implementation
 
@@ -205,6 +206,29 @@ begin
     b := b * random(RESOLUTION) / RESOLUTION;
   end;
   randomPoisson := k - 1;
+end;
+
+function probGaussian(x: real): real;
+{ Inspired by John D. Cook and by Abramowitz and Stegun }
+const
+  a1 = 0.254829592;
+  a2 = -0.284496736;
+  a3 = 1.421413741;
+  a4 = -1.453152027;
+  a5 = 1.061405429;
+  p = 0.3275911;
+var
+  sign: integer;
+  t, y: real;
+begin
+  if x < 0 then
+    sign := -1
+  else
+    sign := 1;
+  x := abs(x) / sqrt(2);
+  t := 1 / (1 + p * x);
+  y := 1 - ((((a5 * t + a4) * t + a3) * t + a2) * t + a1) * t * exp(-x * x);
+  result := 0.5 * (1 + sign * y);
 end;
 
 { Reference:
