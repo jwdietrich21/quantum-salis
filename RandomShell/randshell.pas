@@ -8,10 +8,10 @@ unit randshell;
 
 { Version 1.0.0 }
 
-{ (c) J. W. Dietrich, 1994 - 2018 }
+{ (c) J. W. Dietrich, 1994 - 2019 }
 { (c) Ludwig Maximilian University of Munich 1995 - 2002 }
 { (c) University of Ulm Hospitals 2002-2004 }
-{ (c) Ruhr University of Bochum 2005 - 2018 }
+{ (c) Ruhr University of Bochum 2005 - 2019 }
 
 { Source code released under the BSD License }
 
@@ -39,13 +39,16 @@ type
 
   TRandomShellForm = class(TForm)
     bSpin: TFloatSpinEdit;
+    ResButton: TButton;
     ExplanationLabel: TLabel;
+    ExplanationLabelCDF: TLabel;
     PoissonButton: TButton;
     cSpin: TFloatSpinEdit;
     bLabel: TLabel;
     cLabel: TLabel;
     kLabel: TLabel;
     DescStatButton: TButton;
+    PNormButton: TButton;
     vLabel: TLabel;
     wLabel: TLabel;
     kSpin: TSpinEdit;
@@ -109,9 +112,11 @@ type
     procedure FormCreate(Sender: TObject);
     procedure GammaButtonClick(Sender: TObject);
     procedure meanSpinChange(Sender: TObject);
+    procedure PNormButtonClick(Sender: TObject);
     procedure PoissonButtonClick(Sender: TObject);
     procedure QuitItemClick(Sender: TObject);
     procedure rateSpinChange(Sender: TObject);
+    procedure ResButtonClick(Sender: TObject);
     procedure RNormButtonClick(Sender: TObject);
     procedure RUnifButtonClick(Sender: TObject);
     procedure StatPascalVectorButtonClick(Sender: TObject);
@@ -345,6 +350,14 @@ begin
   if meanSpin.Value <> 0 then rateSpin.Value := 1 / meanSpin.Value;
 end;
 
+procedure TRandomShellForm.PNormButtonClick(Sender: TObject);
+begin
+  if ValuesGrid.RowCount = 0 then;
+    ValuesGrid.RowCount := 13;
+  ValuesGrid.Options := ValuesGrid.Options + [goEditing];
+  ResButton.Enabled := true;
+end;
+
 procedure TRandomShellForm.PoissonButtonClick(Sender: TObject);
 { creates variables from a Poisson distribution }
 var
@@ -377,6 +390,33 @@ end;
 procedure TRandomShellForm.rateSpinChange(Sender: TObject);
 begin
   if rateSpin.Value <> 0 then meanSpin.Value := 1 / rateSpin.Value;
+end;
+
+procedure TRandomShellForm.ResButtonClick(Sender: TObject);
+var
+  i, count: integer;
+  num, res: real;
+  resultString: string;
+begin
+  OutputMemo.Lines.Clear;
+  resultString := '';
+  count := ValuesGrid.RowCount;
+  if count > 2 then
+  begin
+    for i := 1 to count - 3 do
+    begin
+      if ValuesGrid.Cells[1, i] <> '' then
+        num := StrToFloat(ValuesGrid.Cells[1, i])
+      else
+        num := math.NaN;
+      res := probGaussian(num);
+      ResultString := ResultString + FloatToStr(res) + LineEnding;
+    end;
+  end;
+  OutputMemo.Lines.Add(resultString);
+  ValuesGrid.RowCount := 2;
+  ValuesGrid.Cells[1, 1] := '';
+  ValuesGrid.Options := ValuesGrid.Options - [goEditing];
 end;
 
 procedure TRandomShellForm.StatPascalVectorButtonClick(Sender: TObject);

@@ -1,17 +1,17 @@
 object RandomShellForm: TRandomShellForm
-  Left = 373
-  Height = 399
-  Top = 246
+  Left = 366
+  Height = 470
+  Top = 120
   Width = 691
   Caption = 'Random Number Generator'
-  ClientHeight = 399
+  ClientHeight = 470
   ClientWidth = 691
   Constraints.MinHeight = 313
   Constraints.MinWidth = 670
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '2.0.4.0'
   object ParamPanel: TPanel
     Left = 0
     Height = 96
@@ -88,7 +88,6 @@ object RandomShellForm: TRandomShellForm
       Top = 40
       Width = 56
       Increment = 0.01
-      MaxValue = 100
       MinValue = 0
       OnChange = rateSpinChange
       ParentShowHint = False
@@ -204,7 +203,6 @@ object RandomShellForm: TRandomShellForm
       Top = 68
       Width = 64
       Increment = 0.01
-      MaxValue = 100
       MinValue = 0
       OnChange = rateSpinChange
       ParentShowHint = False
@@ -219,7 +217,6 @@ object RandomShellForm: TRandomShellForm
       Top = 68
       Width = 64
       Increment = 0.01
-      MaxValue = 100
       MinValue = 0
       OnChange = rateSpinChange
       ParentShowHint = False
@@ -250,7 +247,6 @@ object RandomShellForm: TRandomShellForm
       Top = 68
       Width = 56
       Increment = 0.01
-      MaxValue = 100
       MinValue = 0
       OnChange = rateSpinChange
       ParentShowHint = False
@@ -339,8 +335,8 @@ object RandomShellForm: TRandomShellForm
   end
   object ValuesGrid: TStringGrid
     Left = 16
-    Height = 206
-    Top = 160
+    Height = 221
+    Top = 216
     Width = 163
     Anchors = [akTop, akLeft, akBottom]
     AutoFillColumns = True
@@ -356,7 +352,7 @@ object RandomShellForm: TRandomShellForm
   object StatusBar: TStatusBar
     Left = 0
     Height = 15
-    Top = 384
+    Top = 455
     Width = 691
     Panels = <>
   end
@@ -367,7 +363,7 @@ object RandomShellForm: TRandomShellForm
     Left = 192
     Height = 23
     Hint = 'Create vector for systems based on the S language (e.g. R, S-PLUS and Tibco Spotfire)'
-    Top = 160
+    Top = 216
     Width = 245
     BorderSpacing.Left = 13
     BorderSpacing.Right = 13
@@ -379,8 +375,8 @@ object RandomShellForm: TRandomShellForm
   end
   object OutputMemo: TMemo
     Left = 450
-    Height = 208
-    Top = 160
+    Height = 223
+    Top = 216
     Width = 224
     Anchors = [akTop, akLeft, akRight, akBottom]
     ScrollBars = ssAutoBoth
@@ -390,7 +386,7 @@ object RandomShellForm: TRandomShellForm
     Left = 192
     Height = 23
     Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
-    Top = 192
+    Top = 248
     Width = 245
     Caption = 'StatPascal vector ->'
     OnClick = StatPascalVectorButtonClick
@@ -497,13 +493,46 @@ object RandomShellForm: TRandomShellForm
     Left = 192
     Height = 23
     Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
-    Top = 224
+    Top = 280
     Width = 245
     Caption = 'Descriptive Statistics ->'
     OnClick = DescStatButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 15
+  end
+  object ExplanationLabelCDF: TLabel
+    Left = 16
+    Height = 16
+    Top = 160
+    Width = 550
+    Caption = 'Click to obtain cumulative density function (CDF) for one of the following distributions:'
+    ParentColor = False
+  end
+  object PNormButton: TButton
+    Left = 104
+    Height = 24
+    Hint = 'Creates a normal (Gaussian) distribution'
+    Top = 182
+    Width = 75
+    Caption = 'Gaussian'
+    OnClick = PNormButtonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 16
+  end
+  object ResButton: TButton
+    Left = 192
+    Height = 23
+    Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
+    Top = 312
+    Width = 245
+    Caption = 'Results ->'
+    Enabled = False
+    OnClick = ResButtonClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 17
   end
   object MainMenu1: TMainMenu
     left = 208
