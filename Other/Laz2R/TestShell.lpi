@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="12"/>
+    <Version Value="11"/>
     <General>
-      <Flags>
-        <CompatibilityMode Value="True"/>
-      </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="RandomShell"/>
+      <MainUnit Value="0"/>
+      <Title Value="Laz2R"/>
       <Scaled Value="True"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
@@ -16,87 +14,57 @@
       </XPManifest>
       <Icon Value="0"/>
     </General>
-    <i18n>
-      <EnableI18N LFM="False"/>
-    </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="123"/>
-      <Attributes pvaDebug="True"/>
-      <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 1994-2025 J. W. Dietrich and others" LegalTrademarks="QUANTUM SALIS" ProductName="QUANTUM SALIS RandomShell" ProductVersion="1.0 Alpina"/>
+      <BuildNr Value="13"/>
+      <Attributes pvaDebug="True" pvaPreRelease="True"/>
+      <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 2008-2021 J. W. Dietrich" LegalTrademarks="QUANTUM SALIS" ProductName="QUANTUM SALIS Laz2R" ProductVersion="1.0 Alpina"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
+      <UseFileFilters Value="True"/>
     </PublishOptions>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes Count="1">
-        <Mode0 Name="default"/>
-      </Modes>
+      <Modes Count="0"/>
     </RunParams>
     <RequiredPackages Count="1">
       <Item1>
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="8">
+    <Units Count="3">
       <Unit0>
-        <Filename Value="RandomShell.lpr"/>
+        <Filename Value="TestShell.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="randshell.pas"/>
+        <Filename Value="gui.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="RandomShellForm"/>
+        <ComponentName Value="MainWindow"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="GUI"/>
       </Unit1>
       <Unit2>
-        <Filename Value="../rdist.pas"/>
+        <Filename Value="rinterface.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="rDist"/>
+        <UnitName Value="RInterface"/>
       </Unit2>
-      <Unit3>
-        <Filename Value="../descstat.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="DescStat"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="../qsfoundation.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="qsFoundation"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="samplegui.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="SampleForm"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="SampleGUI"/>
-      </Unit5>
-      <Unit6>
-        <Filename Value="../perm.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit6>
-      <Unit7>
-        <Filename Value="../ranks.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit7>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="RandomShell"/>
+      <Filename Value="TestShell"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value=".."/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

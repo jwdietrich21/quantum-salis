@@ -1,31 +1,31 @@
 object RandomShellForm: TRandomShellForm
-  Left = 366
-  Height = 470
-  Top = 120
-  Width = 691
+  Left = 676
+  Height = 474
+  Top = 281
+  Width = 794
   Caption = 'Random Number Generator'
-  ClientHeight = 470
-  ClientWidth = 691
+  ClientHeight = 474
+  ClientWidth = 794
   Constraints.MinHeight = 313
   Constraints.MinWidth = 670
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '2.0.4.0'
+  LCLVersion = '3.7.0.0'
   object ParamPanel: TPanel
     Left = 0
     Height = 96
     Top = 8
-    Width = 691
+    Width = 794
     Anchors = [akTop, akLeft, akRight]
     ClientHeight = 96
-    ClientWidth = 691
+    ClientWidth = 794
     TabOrder = 7
     object df1Label: TLabel
       Left = 8
       Height = 16
       Top = 40
-      Width = 36
+      Width = 30
       Caption = 'df1 ='
       ParentColor = False
     end
@@ -33,7 +33,7 @@ object RandomShellForm: TRandomShellForm
       Left = 134
       Height = 16
       Top = 40
-      Width = 36
+      Width = 32
       Caption = 'df2 ='
       ParentColor = False
     end
@@ -41,13 +41,13 @@ object RandomShellForm: TRandomShellForm
       Left = 261
       Height = 16
       Top = 40
-      Width = 37
+      Width = 34
       Caption = 'ncp ='
       ParentColor = False
     end
     object df1Spin: TSpinEdit
       Left = 55
-      Height = 16
+      Height = 21
       Hint = 'Degrees of freedom 1'
       Top = 40
       Width = 64
@@ -57,7 +57,7 @@ object RandomShellForm: TRandomShellForm
     end
     object df2Spin: TSpinEdit
       Left = 180
-      Height = 16
+      Height = 21
       Hint = 'Degrees of freedom 2'
       Top = 40
       Width = 64
@@ -67,7 +67,7 @@ object RandomShellForm: TRandomShellForm
     end
     object ncpSpin: TSpinEdit
       Left = 305
-      Height = 16
+      Height = 21
       Hint = 'ncp (reserved)'
       Top = 40
       Width = 56
@@ -77,27 +77,25 @@ object RandomShellForm: TRandomShellForm
       Left = 384
       Height = 16
       Top = 40
-      Width = 39
+      Width = 36
       Caption = 'rate ='
       ParentColor = False
     end
     object rateSpin: TFloatSpinEdit
       Left = 430
-      Height = 16
+      Height = 21
       Hint = 'Rate (Exponential distribution)'
       Top = 40
       Width = 56
       Increment = 0.01
-      MinValue = 0
       OnChange = rateSpinChange
       ParentShowHint = False
       ShowHint = True
       TabOrder = 8
-      Value = 0
     end
     object CountSpin: TSpinEdit
       Left = 55
-      Height = 16
+      Height = 21
       Hint = 'Count of random numbers to be generated'
       Top = 12
       Width = 64
@@ -111,7 +109,7 @@ object RandomShellForm: TRandomShellForm
       Left = 21
       Height = 16
       Top = 12
-      Width = 23
+      Width = 19
       Caption = 'n ='
       ParentColor = False
     end
@@ -119,13 +117,13 @@ object RandomShellForm: TRandomShellForm
       Left = 131
       Height = 16
       Top = 13
-      Width = 38
+      Width = 34
       Caption = 'min ='
       ParentColor = False
     end
     object minSpin: TSpinEdit
       Left = 180
-      Height = 16
+      Height = 21
       Hint = 'lower bound of random numbers (uniform)'
       Top = 12
       Width = 64
@@ -137,13 +135,13 @@ object RandomShellForm: TRandomShellForm
       Left = 256
       Height = 16
       Top = 13
-      Width = 42
+      Width = 37
       Caption = 'max ='
       ParentColor = False
     end
     object maxSpin: TSpinEdit
       Left = 305
-      Height = 16
+      Height = 21
       Hint = 'Upper bound of random numbers (uniform)'
       Top = 12
       Width = 56
@@ -155,13 +153,13 @@ object RandomShellForm: TRandomShellForm
       Left = 373
       Height = 16
       Top = 13
-      Width = 49
+      Width = 45
       Caption = 'mean ='
       ParentColor = False
     end
     object meanSpin: TSpinEdit
       Left = 430
-      Height = 16
+      Height = 21
       Hint = 'Mean value (Gaussian and Poisson distribution)'
       Top = 12
       Width = 56
@@ -174,50 +172,48 @@ object RandomShellForm: TRandomShellForm
       Left = 502
       Height = 16
       Top = 13
-      Width = 31
+      Width = 29
       Caption = 'SD ='
       ParentColor = False
     end
     object SDSpin: TSpinEdit
       Left = 543
-      Height = 16
+      Height = 21
       Hint = 'Standard deviation (Gaussian)'
       Top = 13
       Width = 60
       ParentShowHint = False
       ShowHint = True
       TabOrder = 4
+      Value = 1
     end
     object bLabel: TLabel
       Left = 146
       Height = 16
       Top = 68
-      Width = 23
+      Width = 20
       Caption = 'b ='
       ParentColor = False
     end
     object aSpin: TFloatSpinEdit
       Left = 55
-      Height = 16
+      Height = 21
       Hint = 'a (Gamma and exponential distribution)'
       Top = 68
       Width = 64
       Increment = 0.01
-      MinValue = 0
       OnChange = rateSpinChange
       ParentShowHint = False
       ShowHint = True
       TabOrder = 9
-      Value = 0
     end
     object bSpin: TFloatSpinEdit
       Left = 180
-      Height = 16
+      Height = 21
       Hint = 'b (Gamma distribution)'
       Top = 68
       Width = 64
       Increment = 0.01
-      MinValue = 0
       OnChange = rateSpinChange
       ParentShowHint = False
       ShowHint = True
@@ -228,7 +224,7 @@ object RandomShellForm: TRandomShellForm
       Left = 22
       Height = 16
       Top = 68
-      Width = 22
+      Width = 19
       Caption = 'a ='
       ParentColor = False
     end
@@ -236,27 +232,25 @@ object RandomShellForm: TRandomShellForm
       Left = 277
       Height = 16
       Top = 68
-      Width = 21
+      Width = 19
       Caption = 'c ='
       ParentColor = False
     end
     object cSpin: TFloatSpinEdit
       Left = 305
-      Height = 16
+      Height = 21
       Hint = 'c (Gamma distribution)'
       Top = 68
       Width = 56
       Increment = 0.01
-      MinValue = 0
       OnChange = rateSpinChange
       ParentShowHint = False
       ShowHint = True
       TabOrder = 11
-      Value = 0
     end
     object kSpin: TSpinEdit
       Left = 543
-      Height = 16
+      Height = 21
       Hint = 'k (for Erlang distribution)'
       Top = 40
       Width = 60
@@ -268,13 +262,13 @@ object RandomShellForm: TRandomShellForm
       Left = 511
       Height = 16
       Top = 40
-      Width = 22
+      Width = 19
       Caption = 'k ='
       ParentColor = False
     end
     object vSpin: TSpinEdit
       Left = 430
-      Height = 16
+      Height = 21
       Hint = 'v (for F distribution)'
       Top = 68
       Width = 56
@@ -286,13 +280,13 @@ object RandomShellForm: TRandomShellForm
       Left = 401
       Height = 16
       Top = 68
-      Width = 21
+      Width = 19
       Caption = 'v ='
       ParentColor = False
     end
     object wSpin: TSpinEdit
       Left = 543
-      Height = 16
+      Height = 21
       Hint = 'w (for F distribution)'
       Top = 68
       Width = 60
@@ -304,243 +298,325 @@ object RandomShellForm: TRandomShellForm
       Left = 509
       Height = 16
       Top = 68
-      Width = 24
+      Width = 22
       Caption = 'w ='
       ParentColor = False
     end
   end
   object RUnifButton: TButton
-    Left = 16
+    Left = 128
     Height = 24
-    Hint = 'Creates a uniform random number distribution'
-    Top = 128
+    Hint = 'Creates n random variable following a uniform distribution'
+    Top = 113
     Width = 75
     Caption = 'Uniform'
-    OnClick = RUnifButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 0
+    OnClick = RUnifButtonClick
   end
   object RNormButton: TButton
-    Left = 104
+    Left = 216
     Height = 24
-    Hint = 'Creates a normal (Gaussian) distribution'
-    Top = 128
+    Hint = 'Creates n random variable following a normal (Gaussian) distribution'
+    Top = 113
     Width = 75
     Caption = 'Gaussian'
-    OnClick = RNormButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 1
+    OnClick = RNormButtonClick
   end
   object ValuesGrid: TStringGrid
     Left = 16
-    Height = 221
+    Height = 225
     Top = 216
-    Width = 163
+    Width = 192
     Anchors = [akTop, akLeft, akBottom]
     AutoFillColumns = True
     ColCount = 2
-    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDblClickAutoSize, goSmoothScroll]
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goDblClickAutoSize, goSmoothScroll]
     RowCount = 1
     TabOrder = 2
     ColWidths = (
       64
-      99
+      126
     )
   end
   object StatusBar: TStatusBar
     Left = 0
-    Height = 15
-    Top = 455
-    Width = 691
+    Height = 18
+    Top = 456
+    Width = 794
     Panels = <>
   end
   object SVectorButton: TButton
     AnchorSideLeft.Control = ValuesGrid
     AnchorSideLeft.Side = asrBottom
     AnchorSideRight.Control = OutputMemo
-    Left = 192
+    Left = 221
     Height = 23
     Hint = 'Create vector for systems based on the S language (e.g. R, S-PLUS and Tibco Spotfire)'
     Top = 216
-    Width = 245
+    Width = 307
+    Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 13
-    BorderSpacing.Right = 13
+    BorderSpacing.Right = 8
     Caption = 'S vector ->'
-    OnClick = SVectorButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 3
+    OnClick = SVectorButtonClick
   end
   object OutputMemo: TMemo
-    Left = 450
-    Height = 223
+    Left = 536
+    Height = 227
     Top = 216
-    Width = 224
+    Width = 241
     Anchors = [akTop, akLeft, akRight, akBottom]
     ScrollBars = ssAutoBoth
     TabOrder = 4
   end
   object StatPascalVectorButton: TButton
-    Left = 192
+    Left = 221
     Height = 23
     Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
-    Top = 248
-    Width = 245
+    Top = 256
+    Width = 307
     Caption = 'StatPascal vector ->'
-    OnClick = StatPascalVectorButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 5
+    OnClick = StatPascalVectorButtonClick
   end
   object ChisqButton: TButton
-    Left = 450
+    Left = 553
     Height = 24
-    Hint = 'Creates a chi square distribution'
-    Top = 129
+    Hint = 'Creates n random variable following a chi square distribution'
+    Top = 113
     Width = 77
     Anchors = [akTop, akRight]
     Caption = 'Chi square'
-    OnClick = ChisqButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 8
+    OnClick = ChisqButtonClick
   end
   object fButton: TButton
-    Left = 248
+    Left = 360
     Height = 24
-    Hint = 'Creates an F distribution'
-    Top = 128
+    Hint = 'Creates n random variable following an F distribution'
+    Top = 113
     Width = 45
     Caption = 'F'
-    OnClick = fButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 9
+    OnClick = fButtonClick
   end
   object tDistButton: TButton
-    Left = 192
+    Left = 304
     Height = 24
-    Hint = 'Creates a t distribution'
-    Top = 128
+    Hint = 'Creates n random variable following a t distribution'
+    Top = 113
     Width = 45
     Caption = 't'
-    OnClick = tDistButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 10
+    OnClick = tDistButtonClick
   end
   object expButton: TButton
-    Left = 392
+    Left = 504
     Height = 24
-    Hint = 'Creates an exponential distribution'
-    Top = 128
+    Hint = 'Creates n random variable following an exponential distribution'
+    Top = 113
     Width = 45
     Caption = 'Exp'
-    OnClick = expButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 11
+    OnClick = expButtonClick
   end
   object GammaButton: TButton
-    Left = 536
+    Left = 639
     Height = 24
-    Hint = 'Creates a Gamma distrituion'
-    Top = 128
+    Hint = 'Creates n random variable following a Gamma distrituion'
+    Top = 112
     Width = 64
     Anchors = [akTop, akRight]
     Caption = 'Gamma'
-    OnClick = GammaButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 12
+    OnClick = GammaButtonClick
   end
   object ErlangButton: TButton
-    Left = 610
+    Left = 713
     Height = 24
-    Hint = 'Creates a series of numbers from an Erlang distribution'
-    Top = 128
+    Hint = 'Creates a series of n random numbers from an Erlang distribution'
+    Top = 112
     Width = 64
     Anchors = [akTop, akRight]
     Caption = 'Erlang'
-    OnClick = ErlangButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 13
+    OnClick = ErlangButtonClick
   end
   object PoissonButton: TButton
-    Left = 304
+    Left = 416
     Height = 24
-    Hint = 'Creates variables from a Poisson distribution'
-    Top = 128
+    Hint = 'Creates n random variable from a Poisson distribution'
+    Top = 113
     Width = 75
     Caption = 'Poisson'
-    OnClick = PoissonButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 14
+    OnClick = PoissonButtonClick
   end
   object ExplanationLabel: TLabel
     Left = 16
     Height = 16
-    Top = 107
-    Width = 470
-    Caption = 'Click to generate random numbers with one of the following distributions:'
+    Hint = 'Creeate random numbers with one of the following distributions'
+    Top = 116
+    Width = 90
+    Caption = 'Random nums:'
     ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
   end
   object DescStatButton: TButton
-    Left = 192
+    Left = 221
     Height = 23
     Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
-    Top = 280
-    Width = 245
+    Top = 288
+    Width = 307
     Caption = 'Descriptive Statistics ->'
-    OnClick = DescStatButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 15
+    OnClick = DescStatButtonClick
   end
   object ExplanationLabelCDF: TLabel
     Left = 16
     Height = 16
-    Top = 160
-    Width = 550
-    Caption = 'Click to obtain cumulative density function (CDF) for one of the following distributions:'
+    Hint = 'Get cumulative distribution function of numbers in the left panel'
+    Top = 152
+    Width = 30
+    Caption = 'CDF:'
     ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
   end
   object PNormButton: TButton
-    Left = 104
+    Left = 216
     Height = 24
-    Hint = 'Creates a normal (Gaussian) distribution'
-    Top = 182
+    Hint = 'Calculates the rank of the numbers from the list on the left in the CDF of a normal (Gaussian) distribution'
+    Top = 144
     Width = 75
     Caption = 'Gaussian'
-    OnClick = PNormButtonClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 16
+    OnClick = PNormButtonClick
   end
-  object ResButton: TButton
-    Left = 192
+  object ClearButton: TButton
+    Left = 221
     Height = 23
     Hint = 'Create vector for systems based on the StatPascal language (e.g. Xtremes)'
-    Top = 312
-    Width = 245
-    Caption = 'Results ->'
-    Enabled = False
-    OnClick = ResButtonClick
+    Top = 418
+    Width = 307
+    Anchors = [akLeft, akBottom]
+    Caption = 'Clear'
     ParentShowHint = False
     ShowHint = True
     TabOrder = 17
+    OnClick = ClearButtonClick
+  end
+  object ExplanationLabelDensity: TLabel
+    Left = 16
+    Height = 16
+    Hint = 'Get probability density function of numbers in the left panel'
+    Top = 184
+    Width = 29
+    Caption = 'PDF:'
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object DTButton: TButton
+    Left = 304
+    Height = 24
+    Hint = 'Calculates the probability of the numbers from the list on the left in a t distribution'
+    Top = 176
+    Width = 45
+    Caption = 't'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 18
+    OnClick = DTButtonClick
+  end
+  object PTButton: TButton
+    Left = 304
+    Height = 24
+    Hint = 'Calculates the probability of the numbers from the list on the left in a t distribution'
+    Top = 144
+    Width = 45
+    Caption = 't'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 19
+    OnClick = PTButtonClick
+  end
+  object AddButton: TButton
+    Left = 221
+    Height = 25
+    Top = 386
+    Width = 35
+    Anchors = [akLeft, akBottom]
+    Caption = '+'
+    TabOrder = 20
+    OnClick = AddButtonClick
+  end
+  object RemoveButton: TButton
+    Left = 264
+    Height = 25
+    Top = 386
+    Width = 35
+    Anchors = [akLeft, akBottom]
+    Caption = '-'
+    TabOrder = 21
+    OnClick = RemoveButtonClick
+  end
+  object DNormButton: TButton
+    Left = 216
+    Height = 24
+    Hint = 'Calculates the rank of the numbers from the list on the left in the PDF of a normal (Gaussian) distribution'
+    Top = 176
+    Width = 75
+    Caption = 'Gaussian'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 22
+    OnClick = DNormButtonClick
   end
   object MainMenu1: TMainMenu
-    left = 208
-    top = 296
+    Left = 1255
+    Top = 336
+    object AppleMenu: TMenuItem
+      Caption = ''
+      object AppleAboutItem: TMenuItem
+        Caption = 'About RandomShell...'
+        OnClick = AppleAboutItemClick
+      end
+    end
     object FileMenu: TMenuItem
       Caption = 'File'
       object NewItem: TMenuItem
         Caption = 'New'
+        Enabled = False
       end
       object OpenItem: TMenuItem
         Caption = 'Open'
@@ -550,9 +626,11 @@ object RandomShellForm: TRandomShellForm
       end
       object CloseItem: TMenuItem
         Caption = 'Close'
+        OnClick = CloseItemClick
       end
       object SaveItem: TMenuItem
         Caption = 'Save'
+        OnClick = SaveItemClick
       end
       object Divider_1_2: TMenuItem
         Caption = '-'
@@ -560,6 +638,17 @@ object RandomShellForm: TRandomShellForm
       object QuitItem: TMenuItem
         Caption = 'Quit'
         OnClick = QuitItemClick
+      end
+    end
+    object GenerateMenu: TMenuItem
+      Caption = 'Generate'
+      object RandomItem: TMenuItem
+        Caption = 'Random Number...'
+        OnClick = RandomItemClick
+      end
+      object SampleItem: TMenuItem
+        Caption = 'Sample'
+        OnClick = SampleItemClick
       end
     end
     object EditMenu: TMenuItem
@@ -584,5 +673,21 @@ object RandomShellForm: TRandomShellForm
         Caption = 'Delete'
       end
     end
+    object HelpMenu: TMenuItem
+      Caption = 'Help'
+      object WinAboutItem: TMenuItem
+        Caption = 'About RandomShell...'
+        OnClick = WinAboutItemClick
+      end
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Title = 'Save as...'
+    DefaultExt = '.txt'
+    FileName = 'Export.txt'
+    Filter = 'txt|txt'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 880
+    Top = 336
   end
 end

@@ -1,0 +1,187 @@
+object SampleForm: TSampleForm
+  Left = 626
+  Height = 264
+  Top = 527
+  Width = 489
+  Caption = 'Sample'
+  ClientHeight = 264
+  ClientWidth = 489
+  Menu = MainMenu1
+  Position = poOwnerFormCenter
+  LCLVersion = '3.7.0.0'
+  object ValuesGrid: TStringGrid
+    Left = 160
+    Height = 225
+    Top = 17
+    Width = 311
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoFillColumns = True
+    ColCount = 2
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDblClickAutoSize, goSmoothScroll]
+    RowCount = 1
+    TabOrder = 0
+    ColWidths = (
+      64
+      245
+    )
+  end
+  object minLabel: TLabel
+    Left = 16
+    Height = 16
+    Top = 18
+    Width = 34
+    Caption = 'min ='
+    ParentColor = False
+  end
+  object minSpin: TSpinEdit
+    Left = 65
+    Height = 21
+    Hint = 'lower bound of random numbers (uniform)'
+    Top = 17
+    Width = 64
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+  end
+  object maxLabel: TLabel
+    Left = 15
+    Height = 16
+    Top = 49
+    Width = 37
+    Caption = 'max ='
+    ParentColor = False
+  end
+  object maxSpin: TSpinEdit
+    Left = 65
+    Height = 21
+    Hint = 'Upper bound of random numbers (uniform)'
+    Top = 48
+    Width = 64
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    Value = 5
+  end
+  object GenerateButton: TButton
+    Left = 16
+    Height = 25
+    Top = 217
+    Width = 113
+    Anchors = [akLeft, akBottom]
+    Caption = 'Generate ->'
+    TabOrder = 3
+    OnClick = GenerateButtonClick
+  end
+  object ReplaceCheckbox: TCheckBox
+    Left = 15
+    Height = 18
+    Top = 80
+    Width = 72
+    Caption = 'Replace'
+    TabOrder = 4
+  end
+  object RankButton: TButton
+    Left = 16
+    Height = 25
+    Top = 182
+    Width = 113
+    Anchors = [akLeft, akBottom]
+    Caption = 'Rank ->'
+    TabOrder = 5
+    OnClick = RankButtonClick
+  end
+  object TiesCombo: TComboBox
+    Left = 16
+    Height = 20
+    Hint = 'Tie handling'
+    Top = 149
+    Width = 113
+    Anchors = [akLeft, akBottom]
+    ItemHeight = 19
+    ItemIndex = 0
+    Items.Strings = (
+      'Average'
+      'Ascend'
+      'Descend'
+      'Random'
+      'Min'
+      'Max'
+    )
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+    Text = 'Average'
+  end
+  object MainMenu1: TMainMenu
+    Left = 304
+    Top = 112
+    object FileMenu: TMenuItem
+      Caption = 'File'
+      object NewItem: TMenuItem
+        Caption = 'New'
+        Enabled = False
+      end
+      object OpenItem: TMenuItem
+        Caption = 'Open'
+      end
+      object Divider_1_1: TMenuItem
+        Caption = '-'
+      end
+      object CloseItem: TMenuItem
+        Caption = 'Close'
+      end
+      object SaveItem: TMenuItem
+        Caption = 'Save'
+        OnClick = SaveItemClick
+      end
+      object Divider_1_2: TMenuItem
+        Caption = '-'
+      end
+      object QuitItem: TMenuItem
+        Caption = 'Quit'
+        OnClick = QuitItemClick
+      end
+    end
+    object GenerateMenu: TMenuItem
+      Caption = 'Generate'
+      object RandomItem: TMenuItem
+        Caption = 'Random Number...'
+        OnClick = RandomItemClick
+      end
+      object SampleItem: TMenuItem
+        Caption = 'Sample'
+      end
+    end
+    object EditMenu: TMenuItem
+      Caption = 'Edit'
+      Checked = True
+      object UndoItem: TMenuItem
+        Caption = 'Undo'
+      end
+      object Divider_2_1: TMenuItem
+        Caption = '-'
+      end
+      object CutItem: TMenuItem
+        Caption = 'Cut'
+      end
+      object CopyItem: TMenuItem
+        Caption = 'Copy'
+      end
+      object PasteItem: TMenuItem
+        Caption = 'Paste'
+      end
+      object DeleteItem: TMenuItem
+        Caption = 'Delete'
+      end
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Title = 'Save as...'
+    DefaultExt = '.csv'
+    FileName = 'Export.csv'
+    Filter = 'csv|csv|csv2|csv2'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 368
+    Top = 112
+  end
+end

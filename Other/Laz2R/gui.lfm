@@ -1,0 +1,146 @@
+object MainWindow: TMainWindow
+  Left = 317
+  Height = 446
+  Top = 169
+  Width = 799
+  Caption = 'Laz2R'
+  ClientHeight = 446
+  ClientWidth = 799
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object CommandMemo: TMemo
+    AnchorSideRight.Control = Splitter1
+    Left = 16
+    Height = 370
+    Top = 31
+    Width = 379
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 5
+    Lines.Strings = (
+      '#Enter R commands here:'
+    )
+    OnEditingDone = CommandMemoExec
+    OnEnter = CommandMemoExec
+    OnExit = CommandMemoExec
+    TabOrder = 0
+  end
+  object Splitter1: TSplitter
+    Left = 400
+    Height = 444
+    Top = 0
+    Width = 10
+    Align = alNone
+  end
+  object OutputMemo: TMemo
+    AnchorSideLeft.Control = Splitter1
+    AnchorSideLeft.Side = asrBottom
+    Left = 415
+    Height = 371
+    Top = 30
+    Width = 362
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 5
+    Lines.Strings = (    )
+    TabOrder = 2
+  end
+  object CommandMemoLabel: TLabel
+    Left = 16
+    Height = 16
+    Top = 8
+    Width = 136
+    Caption = 'R commands or script:'
+    ParentColor = False
+  end
+  object ResultMemolabel: TLabel
+    AnchorSideLeft.Control = Splitter1
+    AnchorSideLeft.Side = asrBottom
+    Left = 415
+    Height = 16
+    Top = 8
+    Width = 136
+    BorderSpacing.Left = 5
+    Caption = 'Results from R engine:'
+    ParentColor = False
+  end
+  object RunButton: TButton
+    AnchorSideRight.Control = Splitter1
+    Left = 325
+    Height = 25
+    Top = 408
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Run'
+    OnClick = RunButtonClick
+    TabOrder = 3
+  end
+  object MainMenu1: TMainMenu
+    Left = 480
+    Top = 408
+    object AppleMenu: TMenuItem
+      Caption = ''
+      object AppleAboutItem: TMenuItem
+        Caption = 'About Laz2R...'
+        OnClick = AppleAboutItemClick
+      end
+    end
+    object FileMenu: TMenuItem
+      Caption = 'File'
+      object NewItem: TMenuItem
+        Caption = 'New'
+        Enabled = False
+      end
+      object OpenItem: TMenuItem
+        Caption = 'Open'
+        Enabled = False
+      end
+      object Divider_1_1: TMenuItem
+        Caption = '-'
+      end
+      object CloseItem: TMenuItem
+        Caption = 'Close'
+        OnClick = CloseItemClick
+      end
+      object SaveItem: TMenuItem
+        Caption = 'Save'
+        Enabled = False
+      end
+      object Divider_1_2: TMenuItem
+        Caption = '-'
+      end
+      object QuitItem: TMenuItem
+        Caption = 'Quit'
+        OnClick = QuitItemClick
+      end
+    end
+    object EditMenu: TMenuItem
+      Caption = 'Edit'
+      Checked = True
+      object UndoItem: TMenuItem
+        Caption = 'Undo'
+      end
+      object Divider_2_1: TMenuItem
+        Caption = '-'
+      end
+      object CutItem: TMenuItem
+        Caption = 'Cut'
+      end
+      object CopyItem: TMenuItem
+        Caption = 'Copy'
+      end
+      object PasteItem: TMenuItem
+        Caption = 'Paste'
+      end
+      object DeleteItem: TMenuItem
+        Caption = 'Delete'
+      end
+    end
+    object HelpMenu: TMenuItem
+      Caption = 'Help'
+      object WinAboutItem: TMenuItem
+        Caption = 'About Laz2R...'
+        OnClick = WinAboutItemClick
+      end
+    end
+  end
+end

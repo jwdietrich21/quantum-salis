@@ -1,17 +1,17 @@
-program RandomShell;
+program SSA_shell;
 
 { QUANTUM SALIS }
 
 { Statistical algorithms for life sciences }
 
-{ GUI shell for investigation of statistical distributions }
+{ Main project file for SSA shell }
 
 { Version 1.0.0 (Alpina) }
 
-{ (c) J. W. Dietrich, 1994 - 2025 }
+{ (c) J. W. Dietrich, 1994 - 2021 }
 { (c) Ludwig Maximilian University of Munich 1995 - 2002 }
 { (c) University of Ulm Hospitals 2002-2004 }
-{ (c) Ruhr University of Bochum 2005 - 2025 }
+{ (c) Ruhr University of Bochum 2005 - 2021 }
 
 { Source code released under the BSD License }
 
@@ -31,7 +31,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, randshell, rDist, DescStat, qsFoundation, SampleGUI;
+  Forms, tachartlazaruspkg, GUI, SSA, timeseries, Plot
+  { you can add units after this };
 
 {$R *.res}
 
@@ -39,9 +40,14 @@ begin
   RequireDerivedFormResource := True;
   Application.Scaled := True;
   Application.Initialize;
-  Application.CreateForm(TRandomShellForm, RandomShellForm);
-  Application.CreateForm(TSampleForm, SampleForm);
-  randomize;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TTimeSeriesForm, TimeSeriesForm);
+  Application.CreateForm(TPlotWindow, PlotWindow);
+  MainForm.UpdateDisplay(nil);
+  MainForm.Show;
+  TimeSeriesForm.Show;
+  PlotWindow.Show;
+  Application.BringToFront;
   Application.Run;
 end.
 

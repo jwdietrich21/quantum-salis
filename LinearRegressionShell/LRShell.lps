@@ -2,17 +2,16 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="11"/>
+    <Version Value="12"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="6">
       <Unit0>
         <Filename Value="LRShell.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="3"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="gui.pas"/>
@@ -21,147 +20,167 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="GUI"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="85"/>
-        <CursorPos X="30" Y="100"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
+        <Filename Value="..\lm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="44" Y="14"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\qsfoundation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="qsFoundation"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="13" Y="2"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
         <Filename Value="C:\lazarus\lcl\grids.pas"/>
         <UnitName Value="Grids"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="9923"/>
         <CursorPos Y="9942"/>
         <UsageCount Value="10"/>
-      </Unit2>
+      </Unit4>
+      <Unit5>
+        <Filename Value="Library\Lazarus\lcl\grids.pas"/>
+        <UnitName Value="Grids"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1715"/>
+        <CursorPos X="15" Y="1733"/>
+        <UsageCount Value="10"/>
+      </Unit5>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
-        <Filename Value="gui.pas"/>
-        <Caret Line="66" Column="33" TopLine="33"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1369" Column="30" TopLine="1331"/>
       </Position1>
       <Position2>
-        <Filename Value="gui.pas"/>
-        <Caret Line="58" Column="14" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1420" Column="30" TopLine="1382"/>
       </Position2>
       <Position3>
-        <Filename Value="gui.pas"/>
-        <Caret Line="61" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1431" Column="30" TopLine="1393"/>
       </Position3>
       <Position4>
-        <Filename Value="gui.pas"/>
-        <Caret Line="62" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1451" Column="21" TopLine="1413"/>
       </Position4>
       <Position5>
-        <Filename Value="gui.pas"/>
-        <Caret Line="63" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1452" Column="21" TopLine="1414"/>
       </Position5>
       <Position6>
-        <Filename Value="gui.pas"/>
-        <Caret Line="64" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1516" Column="21" TopLine="1478"/>
       </Position6>
       <Position7>
-        <Filename Value="gui.pas"/>
-        <Caret Line="65" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1517" Column="21" TopLine="1479"/>
       </Position7>
       <Position8>
-        <Filename Value="gui.pas"/>
-        <Caret Line="62" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1559" Column="28" TopLine="1521"/>
       </Position8>
       <Position9>
-        <Filename Value="gui.pas"/>
-        <Caret Line="63" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1561" Column="25" TopLine="1523"/>
       </Position9>
       <Position10>
-        <Filename Value="gui.pas"/>
-        <Caret Line="64" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1866" Column="30" TopLine="1828"/>
       </Position10>
       <Position11>
-        <Filename Value="gui.pas"/>
-        <Caret Line="65" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1561" Column="16" TopLine="1538"/>
       </Position11>
       <Position12>
-        <Filename Value="gui.pas"/>
-        <Caret Line="62" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1868" Column="26" TopLine="1828"/>
       </Position12>
       <Position13>
-        <Filename Value="gui.pas"/>
-        <Caret Line="67" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1923" Column="26" TopLine="1883"/>
       </Position13>
       <Position14>
-        <Filename Value="gui.pas"/>
-        <Caret Line="62" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="1978" Column="26" TopLine="1938"/>
       </Position14>
       <Position15>
-        <Filename Value="gui.pas"/>
-        <Caret Line="63" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="2033" Column="26" TopLine="1993"/>
       </Position15>
       <Position16>
-        <Filename Value="gui.pas"/>
-        <Caret Line="64" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="2088" Column="26" TopLine="2048"/>
       </Position16>
       <Position17>
-        <Filename Value="gui.pas"/>
-        <Caret Line="65" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="2133" Column="30" TopLine="2095"/>
       </Position17>
       <Position18>
-        <Filename Value="gui.pas"/>
-        <Caret Line="62" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="2179" Column="34" TopLine="2141"/>
       </Position18>
       <Position19>
-        <Filename Value="gui.pas"/>
-        <Caret Line="63" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="2135" Column="21" TopLine="2110"/>
       </Position19>
       <Position20>
-        <Filename Value="gui.pas"/>
-        <Caret Line="64" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="2181" Column="21" TopLine="2141"/>
       </Position20>
       <Position21>
-        <Filename Value="gui.pas"/>
-        <Caret Line="65" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="2225" Column="21" TopLine="2185"/>
       </Position21>
       <Position22>
-        <Filename Value="gui.pas"/>
-        <Caret Line="60" Column="24" TopLine="34"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="2271" Column="20" TopLine="2231"/>
       </Position22>
       <Position23>
-        <Filename Value="gui.pas"/>
-        <Caret Line="84" Column="3" TopLine="55"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="2317" Column="21" TopLine="2277"/>
       </Position23>
       <Position24>
-        <Filename Value="gui.pas"/>
-        <Caret Line="103" Column="56" TopLine="68"/>
+        <Filename Value="..\qsfoundation.pas"/>
+        <Caret Line="80" TopLine="57"/>
       </Position24>
       <Position25>
-        <Filename Value="gui.pas"/>
-        <Caret Line="54" Column="3" TopLine="39"/>
+        <Filename Value="..\lm.pas"/>
+        <Caret Line="135" TopLine="102"/>
       </Position25>
       <Position26>
-        <Filename Value="gui.pas"/>
-        <Caret Line="93" Column="21" TopLine="62"/>
+        <Filename Value="..\lm.pas"/>
+        <Caret Line="136" TopLine="102"/>
       </Position26>
       <Position27>
-        <Filename Value="gui.pas"/>
-        <Caret Line="104" Column="29" TopLine="73"/>
+        <Filename Value="..\lm.pas"/>
+        <Caret Line="105" TopLine="97"/>
       </Position27>
       <Position28>
-        <Filename Value="gui.pas"/>
-        <Caret Line="102" Column="53" TopLine="77"/>
+        <Filename Value="..\lm.pas"/>
+        <Caret Line="131" TopLine="97"/>
       </Position28>
       <Position29>
-        <Filename Value="gui.pas"/>
-        <Caret Line="104" TopLine="85"/>
+        <Filename Value="..\lm.pas"/>
+        <Caret Line="135" Column="21" TopLine="114"/>
       </Position29>
-      <Position30>
-        <Filename Value="gui.pas"/>
-        <Caret Line="106" TopLine="85"/>
-      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes Count="0" ActiveMode=""/>
+      <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
 </CONFIG>

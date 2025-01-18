@@ -1,0 +1,37 @@
+object TimeSeriesForm: TTimeSeriesForm
+  Left = 328
+  Height = 378
+  Top = 226
+  Width = 623
+  Caption = 'Time Series'
+  ClientHeight = 378
+  ClientWidth = 623
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object TimeSeriesGrid: TStringGrid
+    Left = 0
+    Height = 363
+    Top = 0
+    Width = 623
+    Align = alClient
+    AutoFillColumns = True
+    MouseWheelOption = mwGrid
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDblClickAutoSize, goSmoothScroll]
+    RowCount = 39
+    TabOrder = 0
+    ColWidths = (
+      64
+      136
+      136
+      136
+      136
+    )
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 15
+    Top = 363
+    Width = 623
+    Panels = <>
+  end
+end

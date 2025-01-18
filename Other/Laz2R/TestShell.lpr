@@ -1,17 +1,15 @@
-program RandomShell;
+program TestShell;
 
 { QUANTUM SALIS }
 
 { Statistical algorithms for life sciences }
 
-{ GUI shell for investigation of statistical distributions }
+{ Simple demo program for envoking R commands from Lazarus / FPC }
 
 { Version 1.0.0 (Alpina) }
 
-{ (c) J. W. Dietrich, 1994 - 2025 }
-{ (c) Ludwig Maximilian University of Munich 1995 - 2002 }
-{ (c) University of Ulm Hospitals 2002-2004 }
-{ (c) Ruhr University of Bochum 2005 - 2025 }
+{ (c) J. W. Dietrich, 2008 - 2021 }
+{ (c) Ruhr University of Bochum 2008 - 2021 }
 
 { Source code released under the BSD License }
 
@@ -31,17 +29,22 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, randshell, rDist, DescStat, qsFoundation, SampleGUI;
+  Forms, GUI, RInterface
+  { you can add units after this };
 
 {$R *.res}
 
 begin
+  {$IFDEF Windows}
+    SetPathToR('\\vs-chs01\users\dietrichj\Eigene Dateien\Eigene Programme\R\R-3.2.3\bin\x64\Rscript.exe');
+  {$ELSE}
+    SetPathToR('/usr/local/bin/Rscript');
+  {$ENDIF}
   RequireDerivedFormResource := True;
+  Application.Title:='Laz2R';
   Application.Scaled := True;
   Application.Initialize;
-  Application.CreateForm(TRandomShellForm, RandomShellForm);
-  Application.CreateForm(TSampleForm, SampleForm);
-  randomize;
+  Application.CreateForm(TMainWindow, MainWindow);
   Application.Run;
 end.
 

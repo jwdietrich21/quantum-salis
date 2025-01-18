@@ -1,17 +1,19 @@
 object Form1: TForm1
-  Left = 332
+  Left = 668
   Height = 598
-  Top = 72
+  Top = 218
   Width = 701
-  Caption = 'Form1'
+  Caption = 'Linear Regression Shell'
   ClientHeight = 598
   ClientWidth = 701
+  Constraints.MinWidth = 600
+  Menu = MainMenu1
   OnCreate = FormCreate
-  LCLVersion = '2.0.8.0'
+  LCLVersion = '3.7.0.0'
   object ValuesGrid: TStringGrid
     AnchorSideBottom.Control = ResultMemo
     Left = 0
-    Height = 376
+    Height = 373
     Top = 56
     Width = 701
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -24,21 +26,22 @@ object Form1: TForm1
       end    
       item
         Title.Caption = 'y'
-        Width = 319
+        Width = 317
       end>
     MouseWheelOption = mwGrid
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
     RowCount = 14
     TabOrder = 0
     ColWidths = (
       64
       318
-      319
+      317
     )
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 15
-    Top = 583
+    Height = 18
+    Top = 580
     Width = 701
     Panels = <>
   end
@@ -48,7 +51,7 @@ object Form1: TForm1
     AnchorSideBottom.Control = StatusBar1
     Left = 1
     Height = 151
-    Top = 432
+    Top = 429
     Width = 700
     Anchors = [akLeft, akRight, akBottom]
     Lines.Strings = (
@@ -58,7 +61,7 @@ object Form1: TForm1
   end
   object nSpinEdit: TSpinEdit
     Left = 32
-    Height = 16
+    Height = 21
     Top = 16
     Width = 50
     MaxValue = 10000
@@ -76,16 +79,15 @@ object Form1: TForm1
   end
   object aFloatSpinEdit: TFloatSpinEdit
     Left = 112
-    Height = 16
+    Height = 21
     Top = 16
     Width = 64
     MinValue = -100
     TabOrder = 4
-    Value = 0
   end
   object bFloatSpinEdit: TFloatSpinEdit
     Left = 208
-    Height = 16
+    Height = 21
     Top = 16
     Width = 64
     MaxValue = 10
@@ -95,10 +97,9 @@ object Form1: TForm1
   end
   object sdFloatSpinEdit: TFloatSpinEdit
     Left = 320
-    Height = 16
+    Height = 21
     Top = 16
     Width = 64
-    MinValue = 0
     TabOrder = 6
     Value = 1
   end
@@ -119,21 +120,127 @@ object Form1: TForm1
     ParentColor = False
   end
   object sdLabel: TLabel
-    Left = 301
+    Left = 298
     Height = 16
     Top = 17
-    Width = 17
+    Width = 18
     Caption = 'SD'
     ParentColor = False
   end
   object GenerateButton: TButton
-    Left = 600
+    Left = 520
     Height = 25
-    Top = 16
+    Top = 17
     Width = 75
+    Anchors = [akTop, akRight]
     Caption = 'Generate'
-    Default = True
-    OnClick = GenerateButtonClick
     TabOrder = 7
+    OnClick = GenerateButtonClick
+  end
+  object EvalButton: TButton
+    Left = 608
+    Height = 25
+    Top = 17
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Evaluate'
+    Default = True
+    TabOrder = 8
+    OnClick = EvalButtonClick
+  end
+  object MainMenu1: TMainMenu
+    Left = 632
+    Top = 488
+    object AppleMenu: TMenuItem
+      Caption = ''
+      object MacAboutItem: TMenuItem
+        Caption = 'About LR Shell'
+        OnClick = MacAboutItemClick
+      end
+    end
+    object FileMenu: TMenuItem
+      Caption = 'File'
+      object NewItem: TMenuItem
+        Caption = 'New'
+        Enabled = False
+        ShortCut = 16462
+      end
+      object OpenItem: TMenuItem
+        Caption = 'Open'
+        ShortCut = 16463
+        OnClick = OpenItemClick
+      end
+      object Divider_1_1: TMenuItem
+        Caption = '-'
+      end
+      object CloseItem: TMenuItem
+        Caption = 'Close'
+        Enabled = False
+        ShortCut = 16471
+      end
+      object SaveItem: TMenuItem
+        Caption = 'Save'
+        Enabled = False
+        ShortCut = 16467
+      end
+      object Divider_1_2: TMenuItem
+        Caption = '-'
+      end
+      object QuitItem: TMenuItem
+        Caption = 'Quit'
+        ShortCut = 16465
+        OnClick = QuitItemClick
+      end
+    end
+    object EditMenu: TMenuItem
+      Caption = 'Edit'
+      Checked = True
+      object UndoItem: TMenuItem
+        Caption = 'Undo'
+        Enabled = False
+        ShortCut = 16474
+      end
+      object Divider_2_1: TMenuItem
+        Caption = '-'
+      end
+      object CutItem: TMenuItem
+        Caption = 'Cut'
+        Enabled = False
+        ShortCut = 16472
+      end
+      object CopyItem: TMenuItem
+        Caption = 'Copy'
+        Enabled = False
+        ShortCut = 16451
+      end
+      object PasteItem: TMenuItem
+        Caption = 'Paste'
+        Enabled = False
+        ShortCut = 16470
+      end
+      object DeleteItem: TMenuItem
+        Caption = 'Delete'
+        Enabled = False
+      end
+      object Divider_2_2: TMenuItem
+        Caption = '-'
+      end
+      object WinPreferencesItem: TMenuItem
+        Caption = 'Preferences'
+      end
+    end
+    object HelpMenu: TMenuItem
+      Caption = 'Help'
+      object WinAboutItem: TMenuItem
+        Caption = 'About LR Shell'
+        OnClick = WinAboutItemClick
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.csv'
+    Filter = 'csv|.csv|csv2|.csv2'
+    Left = 536
+    Top = 488
   end
 end

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="12"/>
+    <Version Value="11"/>
     <General>
-      <Flags>
-        <CompatibilityMode Value="True"/>
-      </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="RandomShell"/>
+      <MainUnit Value="0"/>
+      <Title Value="SSA_shell"/>
       <Scaled Value="True"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
@@ -16,87 +14,80 @@
       </XPManifest>
       <Icon Value="0"/>
     </General>
-    <i18n>
-      <EnableI18N LFM="False"/>
-    </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="123"/>
-      <Attributes pvaDebug="True"/>
-      <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 1994-2025 J. W. Dietrich and others" LegalTrademarks="QUANTUM SALIS" ProductName="QUANTUM SALIS RandomShell" ProductVersion="1.0 Alpina"/>
+      <BuildNr Value="67"/>
+      <Attributes pvaDebug="True" pvaPatched="True"/>
+      <StringTable CompanyName="FORMATIO RETICULARIS and Ruhr University of Bochum" InternalName="QUANTUM SALIS" LegalCopyright="© 1994-2021 J. W. Dietrich and others" LegalTrademarks="QUANTUM SALIS" ProductName="QUANTUM SALIS SSA Shell" ProductVersion="1.0 Alpina"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
+      <UseFileFilters Value="True"/>
     </PublishOptions>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes Count="1">
-        <Mode0 Name="default"/>
-      </Modes>
+      <Modes Count="0"/>
     </RunParams>
-    <RequiredPackages Count="1">
+    <RequiredPackages Count="2">
       <Item1>
-        <PackageName Value="LCL"/>
+        <PackageName Value="TAChartLazarusPkg"/>
       </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
     </RequiredPackages>
-    <Units Count="8">
+    <Units Count="6">
       <Unit0>
-        <Filename Value="RandomShell.lpr"/>
+        <Filename Value="SSA_shell.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="randshell.pas"/>
+        <Filename Value="GUI.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="RandomShellForm"/>
+        <ComponentName Value="MainForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
       <Unit2>
-        <Filename Value="../rdist.pas"/>
+        <Filename Value="ssa.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="rDist"/>
+        <UnitName Value="SSA"/>
       </Unit2>
       <Unit3>
-        <Filename Value="../descstat.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="DescStat"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="../qsfoundation.pas"/>
+        <Filename Value="../../qsfoundation.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="qsFoundation"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="samplegui.pas"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="timeseries.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="SampleForm"/>
+        <ComponentName Value="TimeSeriesForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="SampleGUI"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="plot.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PlotWindow"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Plot"/>
       </Unit5>
-      <Unit6>
-        <Filename Value="../perm.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit6>
-      <Unit7>
-        <Filename Value="../ranks.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit7>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="RandomShell"/>
+      <Filename Value="SSA_shell"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value=".."/>
+      <OtherUnitFiles Value="../.."/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

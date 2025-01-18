@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
-    <Version Value="10"/>
+    <Version Value="12"/>
     <BuildModes Active="Default"/>
-    <Units Count="5">
+    <Units Count="12">
       <Unit0>
         <Filename Value="qstests.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="5"/>
-        <CursorPos Y="27"/>
-        <UsageCount Value="22"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="49"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="qstestcases.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="qsTestCases"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <CursorPos X="31" Y="169"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="7"/>
+        <CursorPos Y="28"/>
+        <ExtraEditorCount Value="1"/>
+        <ExtraEditor1>
+          <EditorIndex Value="-1"/>
+          <WindowIndex Value="-1"/>
+          <TopLine Value="-1"/>
+          <CursorPos X="-1" Y="-1"/>
+        </ExtraEditor1>
+        <UsageCount Value="49"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -27,17 +35,23 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="DescStat"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="7" Y="2"/>
-        <UsageCount Value="22"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="49"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="../qsfoundation.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="qsFoundation"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="25" Y="245"/>
-        <UsageCount Value="22"/>
+        <CursorPos Y="2"/>
+        <ExtraEditorCount Value="1"/>
+        <ExtraEditor1>
+          <EditorIndex Value="-1"/>
+          <WindowIndex Value="-1"/>
+          <TopLine Value="-1"/>
+          <CursorPos X="-1" Y="-1"/>
+        </ExtraEditor1>
+        <UsageCount Value="49"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -45,139 +59,190 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="rDist"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="44" Y="14"/>
-        <UsageCount Value="22"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="49"/>
         <Loaded Value="True"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="/lazarus/fpc/3.2.0/source/packages/fcl-fpcunit/src/fpcunit.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="78"/>
+        <CursorPos X="21" Y="98"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="/lazarus/fpc/3.2.0/source/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23" Y="27"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="/lazarus/fpc/3.2.0/source/rtl/objpas/types.pp"/>
+        <UnitName Value="Types"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="71"/>
+        <CursorPos X="26" Y="87"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="/lazarus/fpc/3.2.0/source/rtl/inc/typshrdh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="46"/>
+        <CursorPos X="3" Y="62"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="/usr/local/share/fpcsrc/packages/fcl-fpcunit/src/testutils.pp"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="/usr/local/share/fpcsrc/rtl/objpas/math.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="388"/>
+        <CursorPos X="10" Y="407"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="/lazarus/fpc/3.2.0/source/rtl/objpas/objpas.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16"/>
+        <CursorPos X="28" Y="33"/>
+        <UsageCount Value="10"/>
+      </Unit11>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="121" TopLine="93"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="46" Column="35" TopLine="22"/>
       </Position1>
       <Position2>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="120" TopLine="93"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="48" Column="51" TopLine="22"/>
       </Position2>
       <Position3>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="121" TopLine="93"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="50" Column="50" TopLine="23"/>
       </Position3>
       <Position4>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="120" TopLine="93"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="87" Column="37" TopLine="60"/>
       </Position4>
       <Position5>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="121" TopLine="93"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="92" Column="39" TopLine="65"/>
       </Position5>
       <Position6>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="120" TopLine="93"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="189" Column="24" TopLine="161"/>
       </Position6>
       <Position7>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="121" TopLine="93"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="998" Column="24" TopLine="981"/>
       </Position7>
       <Position8>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="120" TopLine="93"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="186" Column="48" TopLine="161"/>
       </Position8>
       <Position9>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="121" TopLine="93"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="52" Column="48" TopLine="33"/>
       </Position9>
       <Position10>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="120" TopLine="93"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="1168" Column="35" TopLine="1818"/>
       </Position10>
       <Position11>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="134" TopLine="112"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="149" Column="22" TopLine="133"/>
       </Position11>
       <Position12>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="139" TopLine="111"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="150" Column="22" TopLine="133"/>
       </Position12>
       <Position13>
-        <Filename Value="qstestcases.pas"/>
-        <Caret Line="104" TopLine="79"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="52" Column="48" TopLine="33"/>
       </Position13>
       <Position14>
-        <Filename Value="qstestcases.pas"/>
-        <Caret Line="105" TopLine="79"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="181" Column="13" TopLine="154"/>
       </Position14>
       <Position15>
         <Filename Value="qstestcases.pas"/>
-        <Caret Line="106" TopLine="79"/>
+        <Caret Line="999" Column="29" TopLine="981"/>
       </Position15>
       <Position16>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="150" TopLine="133"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="995" TopLine="981"/>
       </Position16>
       <Position17>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="151" TopLine="133"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="996" TopLine="981"/>
       </Position17>
       <Position18>
         <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="152" TopLine="133"/>
+        <Caret Line="2237" TopLine="1901"/>
       </Position18>
       <Position19>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="128" Column="28" TopLine="103"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="997" Column="18" TopLine="981"/>
       </Position19>
       <Position20>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="95" Column="11" TopLine="74"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="996" TopLine="981"/>
       </Position20>
       <Position21>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="174" TopLine="146"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="997" TopLine="981"/>
       </Position21>
       <Position22>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="147" Column="29" TopLine="162"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="998" TopLine="981"/>
       </Position22>
       <Position23>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="98" Column="13" TopLine="81"/>
+        <Filename Value="../descstat.pas"/>
+        <Caret Line="171" Column="22" TopLine="161"/>
       </Position23>
       <Position24>
-        <Filename Value="qstestcases.pas"/>
-        <Caret Line="52" Column="37" TopLine="38"/>
+        <Filename Value="../qsfoundation.pas"/>
+        <Caret Line="33" TopLine="136"/>
       </Position24>
       <Position25>
         <Filename Value="qstestcases.pas"/>
-        <Caret Line="122" Column="36" TopLine="96"/>
+        <Caret Line="995" TopLine="238"/>
       </Position25>
       <Position26>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="108" Column="32" TopLine="87"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="2" Column="19" TopLine="151"/>
       </Position26>
       <Position27>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="97" Column="21" TopLine="65"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="33" Column="22" TopLine="17"/>
       </Position27>
       <Position28>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="119" Column="32" TopLine="100"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="145" Column="9" TopLine="142"/>
       </Position28>
       <Position29>
-        <Filename Value="../qsfoundation.pas"/>
-        <Caret Line="123" Column="30" TopLine="101"/>
+        <Filename Value="qstestcases.pas"/>
+        <Caret Line="147" Column="7" TopLine="141"/>
       </Position29>
       <Position30>
         <Filename Value="qstestcases.pas"/>
-        <Caret Line="54" Column="33" TopLine="29"/>
+        <Caret Line="979" TopLine="975"/>
       </Position30>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
   <Debugging>
-    <Watches Count="1">
-      <Item1>
+    <Watches>
+      <Item>
         <Expression Value="VEC3"/>
-      </Item1>
+      </Item>
     </Watches>
   </Debugging>
 </CONFIG>
